@@ -219,14 +219,25 @@
   margin-bottom:46px;
 }
 
-.guide-header span {
-  display:block;
+.guide-kicker {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.guide-kicker span {
   color:#ff5b16;
   text-transform:uppercase;
   font-size:12px;
   letter-spacing:2px;
   font-weight:600;
-  margin-bottom:14px;
+}
+
+.guide-kicker img {
+  width:150px;
+  height:auto;
+  display:block;
 }
 
 .guide-header h2 {
@@ -296,6 +307,7 @@
   line-height:1.5;
   font-weight:300;
   max-width:260px;
+  min-height:40px;
 }
     footer {
       background:#243B7A;
@@ -468,14 +480,21 @@
   </div>
 </section>
 <section class="marevostrum-guide" id="peniscola-marevostrum">
-  <div class="guide-header">
-    <span>Peñíscola según Marevostrum</span>
-    <h2>No es una guía turística.</h2>
-    <p>
-      Son los lugares y pequeñas costumbres a los que volvemos una y otra vez
-      cuando estamos aquí.
-    </p>
+ <div class="guide-header">
+
+  <div class="guide-kicker">
+    <span>Peñíscola según</span>
+    <img src="MAREVOSTRUM logo.svg" alt="Marevostrum">
   </div>
+
+  <h2>Compartimos contigo nuestro Mediterráneo.</h2>
+
+  <p>
+    Son los lugares y pequeñas costumbres a los que volvemos una y otra vez
+    cuando estamos aquí.
+  </p>
+
+</div>
 
   <div class="guide-grid">
 
@@ -483,7 +502,7 @@
       <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola">
       <div class="guide-card-text">
         <h3>Comer</h3>
-        <p>Mesas sencillas, producto bueno y sitios donde quedarse sin mirar la hora.</p>
+        <p>Mesas sencillas, producto bueno y tiempo para quedarse.</p>
       </div>
     </article>
 
@@ -491,7 +510,7 @@
       <img src="images/peniscola-segun-marevostrum/calas.jpg" alt="Calas de Peñíscola">
       <div class="guide-card-text">
         <h3>Bañarse</h3>
-        <p>Playas, calas y rincones donde el Mediterráneo se disfruta mejor sin prisa.</p>
+        <p>Playas y calas para entrar al agua sin prisa.</p>
       </div>
     </article>
 
@@ -499,7 +518,7 @@
       <img src="images/peniscola-segun-marevostrum/naturaleza.jpg" alt="Naturaleza en Peñíscola">
       <div class="guide-card-text">
         <h3>Moverse</h3>
-        <p>Caminar, pedalear, salir al monte o acercarse al mar sin grandes planes.</p>
+        <p>Caminar, pedalear y salir al monte mirando al mar.</p>
       </div>
     </article>
 
