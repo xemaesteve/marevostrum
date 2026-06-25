@@ -260,7 +260,95 @@ img[alt="Restaurantes"]{
       color:#ff5b16;
       font-size:34px;
     }
+.marevostrum-guide {
+  background:#fff;
+  padding:90px 7% 100px;
+  color:#243B7A;
+}
 
+.guide-header {
+  max-width:720px;
+  margin-bottom:46px;
+}
+
+.guide-header span {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+.guide-header h2 {
+  font-size:42px;
+  line-height:1.1;
+  font-weight:300;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.guide-header p {
+  font-size:16px;
+  line-height:1.8;
+  font-weight:300;
+  max-width:560px;
+}
+
+.guide-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:34px;
+}
+
+.guide-card {
+  position:relative;
+  overflow:hidden;
+  background:#f7f4ee;
+  min-height:360px;
+}
+
+.guide-card img {
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+
+.guide-card:hover img {
+  transform:scale(1.04);
+}
+
+.guide-card-text {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:24px;
+  color:white;
+  background:linear-gradient(
+    0deg,
+    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.35) 55%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.guide-card-text h3 {
+  font-size:24px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.guide-card-text p {
+  font-size:13px;
+  line-height:1.5;
+  font-weight:300;
+  max-width:260px;
+}
     footer {
       background:#243B7A;
       color:white;
@@ -336,6 +424,26 @@ img[alt="Restaurantes"]{
         grid-template-columns:1fr;
       }
     }
+            @media(max-width:800px) {
+  .marevostrum-guide {
+    padding:70px 6% 80px;
+  }
+
+  .guide-header h2 {
+    font-size:32px;
+  }
+
+  .guide-grid {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .guide-card,
+  .guide-card img {
+    height:320px;
+    min-height:320px;
+  }
+}
   </style>
 </head>
 
@@ -451,7 +559,44 @@ img[alt="Restaurantes"]{
     </div>
   </div>
 </section>
+<section class="marevostrum-guide" id="peniscola-marevostrum">
+  <div class="guide-header">
+    <span>Peñíscola según Marevostrum</span>
+    <h2>No es una guía turística.</h2>
+    <p>
+      Son los lugares y pequeñas costumbres a los que volvemos una y otra vez
+      cuando estamos aquí.
+    </p>
+  </div>
 
+  <div class="guide-grid">
+
+    <article class="guide-card">
+      <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola">
+      <div class="guide-card-text">
+        <h3>Comer</h3>
+        <p>Mesas sencillas, producto bueno y sitios donde quedarse sin mirar la hora.</p>
+      </div>
+    </article>
+
+    <article class="guide-card">
+      <img src="images/peniscola-segun-marevostrum/calas.jpg" alt="Calas de Peñíscola">
+      <div class="guide-card-text">
+        <h3>Bañarse</h3>
+        <p>Playas, calas y rincones donde el Mediterráneo se disfruta mejor sin prisa.</p>
+      </div>
+    </article>
+
+    <article class="guide-card">
+      <img src="images/peniscola-segun-marevostrum/naturaleza.jpg" alt="Naturaleza en Peñíscola">
+      <div class="guide-card-text">
+        <h3>Moverse</h3>
+        <p>Caminar, pedalear, salir al monte o acercarse al mar sin grandes planes.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
 <footer id="contacto">
   <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
 
