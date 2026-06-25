@@ -425,6 +425,70 @@
   font-weight:600;
   margin-bottom:14px;
 }
+.guide-card {
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.guide-card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(36,59,122,.58);
+  opacity:0;
+  transition:opacity .45s ease;
+  z-index:1;
+}
+
+.guide-card-text {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:26px;
+  color:white;
+  background:none;
+  z-index:2;
+  opacity:0;
+  transform:translateY(18px);
+  transition:
+    opacity .45s ease,
+    transform .45s ease;
+}
+
+.guide-card:hover::before {
+  opacity:1;
+}
+
+.guide-card:hover .guide-card-text {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.guide-card-text h3 {
+  font-size:24px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.guide-card-text p {
+  font-size:13px;
+  line-height:1.5;
+  font-weight:300;
+  max-width:260px;
+}
+@media(max-width:800px) {
+  .guide-card::before {
+    opacity:.55;
+  }
+
+  .guide-card-text {
+    opacity:1;
+    transform:none;
+  }
+}
   </style>
 </head>
 
