@@ -178,9 +178,87 @@
         font-size:32px;
       }
     }
+   .perla-features {
+  padding:80px 7%;
+  background:#f7f4ee;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+}
+
+.feature {
+  background:white;
+  padding:32px 28px;
+  min-height:210px;
+}
+
+.feature span {
+  display:block;
+  color:#ff5b16;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.feature h3 {
+  font-size:22px;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:16px;
+}
+
+.feature p {
+  font-size:15px;
+  line-height:1.7;
+  font-weight:300;
+}
+   @media(max-width:800px) {
+  .perla-features {
+    grid-template-columns:1fr;
+    padding:60px 6%;
+    gap:20px;
+  }
+
+  .feature {
+    min-height:auto;
+  }
+
+  .feature h3 {
+    font-size:20px;
+  }
+} 
   </style>
 </head>
+<section class="perla-features">
 
+  <div class="feature">
+    <span>01</span>
+    <h3>Vistas panorámicas</h3>
+    <p>Peñíscola, el castillo y el Mediterráneo abiertos frente a ti.</p>
+  </div>
+
+  <div class="feature">
+    <span>02</span>
+    <h3>Aparcar sin vueltas</h3>
+    <p>Llegar, dejar el coche y olvidarse de buscar sitio en el centro.</p>
+  </div>
+
+  <div class="feature">
+    <span>03</span>
+    <h3>Teletrabajar mirando al mar</h3>
+    <p>Luz natural, calma y una vista que cambia el ritmo del día.</p>
+  </div>
+
+  <div class="feature">
+    <span>04</span>
+    <h3>Playa, monte y bici</h3>
+    <p>Una base tranquila para moverse entre mar, rutas y naturaleza.</p>
+  </div>
+
+</section>
 <body>
 
 <header>
