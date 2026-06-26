@@ -6,7 +6,122 @@
   <title>Apartamento Perla | Marevostrum Estancias</title>
 
   <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
+ .perla-info {
+  padding:80px 7%;
+  background:white;
+  color:#243B7A;
+}
 
+.info-header {
+  max-width:680px;
+  margin-bottom:42px;
+}
+
+.info-header span {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+.info-header h2 {
+  font-size:38px;
+  line-height:1.15;
+  font-weight:300;
+}
+
+.info-grid {
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:18px;
+  margin-bottom:36px;
+}
+
+.info-item {
+  border:1px solid rgba(36,59,122,.18);
+  padding:24px 22px;
+  background:#f7f4ee;
+}
+
+.info-item strong {
+  display:block;
+  font-size:32px;
+  line-height:1;
+  color:#ff5b16;
+  margin-bottom:8px;
+}
+
+.info-item span {
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:600;
+}
+
+.distribution {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:34px;
+}
+
+.distribution div {
+  border:1px solid rgba(36,59,122,.18);
+  padding:28px;
+}
+
+.distribution h3 {
+  font-size:20px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:14px;
+}
+
+.distribution p {
+  font-size:15px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.services span {
+  border:1px solid rgba(36,59,122,.22);
+  padding:12px 18px;
+  border-radius:26px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  font-weight:600;
+}
+  @media(max-width:800px) {
+  .perla-info {
+    padding:60px 6%;
+  }
+
+  .info-header h2 {
+    font-size:30px;
+  }
+
+  .info-grid {
+    grid-template-columns:1fr 1fr;
+  }
+
+  .distribution {
+    grid-template-columns:1fr;
+  }
+
+  .services span {
+    font-size:11px;
+  }
+}
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -277,6 +392,61 @@
       de aparcar sin dar vueltas.
     </p>
   </div>
+</section>
+  <section class="perla-info" id="disponibilidad">
+
+  <div class="info-header">
+    <span>Información del apartamento</span>
+    <h2>Todo lo necesario para una estancia cómoda.</h2>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-item">
+      <strong>5</strong>
+      <span>huéspedes</span>
+    </div>
+
+    <div class="info-item">
+      <strong>2</strong>
+      <span>dormitorios</span>
+    </div>
+
+    <div class="info-item">
+      <strong>3</strong>
+      <span>camas</span>
+    </div>
+
+    <div class="info-item">
+      <strong>1</strong>
+      <span>baño</span>
+    </div>
+
+    <div class="info-item">
+      <strong>65</strong>
+      <span>m²</span>
+    </div>
+  </div>
+
+  <div class="distribution">
+    <div>
+      <h3>Dormitorio principal</h3>
+      <p>Una cama doble de matrimonio.</p>
+    </div>
+
+    <div>
+      <h3>Dormitorio 2</h3>
+      <p>Dos literas.</p>
+    </div>
+  </div>
+
+  <div class="services">
+    <span>Piscina</span>
+    <span>Wifi</span>
+    <span>Aire acondicionado</span>
+    <span>Toallas</span>
+    <span>Permitido fumar</span>
+  </div>
+
 </section>
 <section class="perla-features">
 
