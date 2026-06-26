@@ -400,6 +400,70 @@
     font-size:14px !important;
   }
 }
+    .perla-gallery {
+  padding:90px 7%;
+  background:#f7f4ee;
+  color:#243B7A;
+}
+
+.gallery-header {
+  max-width:720px;
+  margin-bottom:42px;
+}
+
+.gallery-header span {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+.gallery-header h2 {
+  font-size:38px;
+  line-height:1.15;
+  font-weight:300;
+}
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:1.35fr 1fr 1fr;
+  grid-template-rows:260px 260px;
+  gap:20px;
+}
+
+.gallery-grid img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.gallery-large {
+  grid-row:span 2;
+}
+    @media(max-width:800px) {
+  .perla-gallery {
+    padding:60px 6%;
+  }
+
+  .gallery-header h2 {
+    font-size:30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+  }
+
+  .gallery-grid img,
+  .gallery-large {
+    height:280px;
+    grid-row:auto;
+  }
+}
   </style>
 </head>
 
@@ -542,6 +606,25 @@
   </div>
 
 </section>
+<section class="perla-gallery">
 
+  <div class="gallery-header">
+    <span>El apartamento</span>
+    <h2>Espacios sencillos, luz mediterránea y vistas abiertas.</h2>
+  </div>
+
+  <div class="gallery-grid">
+    <img class="gallery-large" src="images/apartamentos/perla/perla-1-nueva.jpg" alt="Salón y cocina del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/cocina-perla.jpg" alt="Detalle de la cocina del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/habitación-perla-1.jpg" alt="Dormitorio principal del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/habitación-perla-2.jpg" alt="Habitación con literas del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/piscina-perla.jpg" alt="Piscina del Apartamento Perla">
+  </div>
+
+</section>
 </body>
 </html>
