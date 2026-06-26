@@ -359,6 +359,47 @@
         font-size:20px;
       }
     }
+    /* SERVICIOS PERLA - RECTÁNGULO */
+.services {
+  background:white !important;
+  border:1px solid rgba(36,59,122,.18) !important;
+  padding:28px !important;
+  display:grid !important;
+  grid-template-columns:repeat(3, 1fr) !important;
+  gap:18px 28px !important;
+  border-radius:0 !important;
+}
+
+.services span {
+  display:block !important;
+  border:0 !important;
+  border-bottom:1px solid rgba(36,59,122,.12) !important;
+  border-radius:0 !important;
+  padding:0 0 12px 0 !important;
+  background:transparent !important;
+  font-size:14px !important;
+  line-height:1.4 !important;
+  font-weight:300 !important;
+  text-transform:none !important;
+  letter-spacing:0 !important;
+}
+
+.services span::before {
+  content:"— ";
+  color:#ff5b16;
+  font-weight:600;
+}
+
+@media(max-width:800px) {
+  .services {
+    grid-template-columns:1fr !important;
+    padding:24px !important;
+  }
+
+  .services span {
+    font-size:14px !important;
+  }
+}
   </style>
 </head>
 
