@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartamento Perla | Marevostrum Estancias</title>
+
+  <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'Gotham SSm', sans-serif;
+      background:#f7f4ee;
+      color:#243B7A;
+    }
+
+    header {
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      padding:38px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      z-index:10;
+    }
+
+    .logo {
+      width:260px;
+      filter:brightness(0) invert(1);
+    }
+
+    nav {
+      display:flex;
+      gap:34px;
+      align-items:center;
+      font-size:13px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      font-weight:bold;
+    }
+
+    nav a {
+      color:white;
+      text-decoration:none;
+    }
+
+    .whatsapp {
+      background:#ff5b16;
+      padding:14px 22px;
+      border-radius:28px;
+    }
+
+    .hero-perla {
+      min-height:92vh;
+      background:
+        linear-gradient(90deg, rgba(0,39,78,.82) 0%, rgba(0,39,78,.42) 48%, rgba(0,0,0,.12) 100%),
+        url("images/apartamentos/perla/perla-hero-vistas.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:150px 7% 90px;
+      color:white;
+    }
+
+    .hero-content {
+      max-width:660px;
+    }
+
+    .label {
+      display:block;
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:13px;
+      letter-spacing:2px;
+      font-weight:600;
+      margin-bottom:22px;
+    }
+
+    h1 {
+      font-size:68px;
+      line-height:1.05;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:30px;
+    }
+
+    .hero-content p {
+      font-size:18px;
+      line-height:1.7;
+      font-weight:300;
+      max-width:560px;
+      margin-bottom:36px;
+    }
+
+    .btn {
+      display:inline-block;
+      background:#ff5b16;
+      color:white;
+      padding:16px 28px;
+      border-radius:28px;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:1.5px;
+      font-weight:600;
+      margin-right:12px;
+    }
+
+    .btn-secondary {
+      background:transparent;
+      border:1px solid white;
+    }
+
+    .quick-info {
+      padding:46px 7%;
+      background:white;
+    }
+
+    .info-grid {
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:18px;
+    }
+
+    .info-item {
+      border:1px solid rgba(36,59,122,.18);
+      padding:24px 22px;
+      background:#f7f4ee;
+    }
+
+    .info-item strong {
+      display:block;
+      font-size:32px;
+      line-height:1;
+      color:#ff5b16;
+      margin-bottom:8px;
+    }
+
+    .info-item span {
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-weight:600;
+    }
+
+    .perla-gallery {
+      padding:90px 7%;
+      background:#f7f4ee;
+      color:#243B7A;
+    }
+
+    .gallery-header {
+      max-width:720px;
+      margin-bottom:42px;
+    }
+
+    .gallery-header span {
+      display:block;
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:600;
+      margin-bottom:14px;
+    }
+
+    .gallery-header h2 {
+      font-size:38px;
+      line-height:1.15;
+      font-weight:300;
+    }
+
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:1.35fr 1fr 1fr;
+      grid-template-rows:260px 260px;
+      gap:20px;
+    }
+
+    .gallery-grid img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .gallery-large {
+      grid-row:span 2;
+    }
+
+    .intro-perla {
+      background:white;
+      padding:80px 7%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:start;
+    }
+
+    .intro-perla h2 {
+      font-size:42px;
+      line-height:1.15;
+      font-weight:300;
+      margin-bottom:24px;
+    }
+
+    .intro-perla p {
+      font-size:16px;
+      line-height:1.8;
+      font-weight:300;
+    }
+
+    .perla-details {
+      padding:80px 7%;
+      background:#f7f4ee;
+      color:#243B7A;
+    }
+
+    .details-header {
+      max-width:680px;
+      margin-bottom:42px;
+    }
+
+    .details-header span {
+      display:block;
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:600;
+      margin-bottom:14px;
+    }
+
+    .details-header h2 {
+      font-size:38px;
+      line-height:1.15;
+      font-weight:300;
+    }
+
+    .distribution {
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+      margin-bottom:34px;
+    }
+
+    .distribution div {
+      background:white;
+      border:1px solid rgba(36,59,122,.18);
+      padding:28px;
+    }
+
+    .distribution h3 {
+      font-size:20px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      margin-bottom:14px;
+    }
+
+    .distribution p {
+      font-size:15px;
+      line-height:1.7;
+      font-weight:300;
+    }
+
+    .services {
+      background:white;
+      border:1px solid rgba(36,59,122,.18);
+      padding:28px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px 28px;
+    }
+
+    .services span {
+      display:block;
+      border-bottom:1px solid rgba(36,59,122,.12);
+      padding-bottom:12px;
+      font-size:14px;
+      line-height:1.4;
+      font-weight:300;
+    }
+
+    .services span::before {
+      content:"— ";
+      color:#ff5b16;
+      font-weight:600;
+    }
+
+    .perla-features {
+      padding:80px 7%;
+      background:white;
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:24px;
+    }
+
+    .feature {
+      background:#f7f4ee;
+      padding:32px 28px;
+      min-height:210px;
+    }
+
+    .feature span {
+      display:block;
+      color:#ff5b16;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .feature h3 {
+      font-size:22px;
+      line-height:1.2;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      margin-bottom:16px;
+    }
+
+    .feature p {
+      font-size:15px;
+      line-height:1.7;
+      font-weight:300;
+    }
+
+    .perla-cta {
+      padding:90px 7%;
+      background:#243B7A;
+      color:white;
+      text-align:center;
+    }
+    .cta-logo {
+  width:170px;
+  filter:brightness(0) invert(1);
+  margin-bottom:28px;
+}
+
+    .perla-cta span {
+      display:block;
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+
+    .perla-cta h2 {
+      font-size:42px;
+      line-height:1.15;
+      font-weight:300;
+      max-width:760px;
+      margin:0 auto 24px;
+    }
+
+    .perla-cta p {
+      font-size:16px;
+      line-height:1.8;
+      font-weight:300;
+      max-width:560px;
+      margin:0 auto 34px;
+    }
+
+    .perla-cta .btn-secondary {
+      border-color:white;
+    }
+
+    @media(max-width:800px) {
+      header {
+        padding:26px 6%;
+        flex-direction:column;
+        gap:18px;
+      }
+
+      .logo {
+        width:210px;
+      }
+
+      nav {
+        gap:16px;
+        flex-wrap:wrap;
+        font-size:11px;
+      }
+
+      .hero-perla {
+        min-height:88vh;
+        padding:165px 6% 80px;
+      }
+
+      h1 {
+        font-size:42px;
+      }
+
+      .hero-content p {
+        font-size:16px;
+      }
+
+      .quick-info {
+        padding:36px 6%;
+      }
+
+      .info-grid {
+        grid-template-columns:1fr 1fr;
+      }
+
+      .info-item {
+        padding:22px 18px;
+      }
+
+      .info-item strong {
+        font-size:28px;
+      }
+
+      .info-item span {
+        font-size:11px;
+      }
+
+      .perla-gallery {
+        padding:60px 6%;
+      }
+
+      .gallery-header h2 {
+        font-size:30px;
+      }
+
+      .gallery-grid {
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+      }
+
+      .gallery-grid img,
+      .gallery-large {
+        height:280px;
+        grid-row:auto;
+      }
+
+      .intro-perla {
+        grid-template-columns:1fr;
+        padding:60px 6%;
+        gap:28px;
+      }
+
+      .intro-perla h2 {
+        font-size:32px;
+      }
+
+      .perla-details {
+        padding:60px 6%;
+      }
+
+      .details-header h2 {
+        font-size:30px;
+      }
+
+      .distribution {
+        grid-template-columns:1fr;
+      }
+
+      .services {
+        grid-template-columns:1fr;
+        padding:24px;
+      }
+
+      .services span {
+        font-size:14px;
+      }
+
+      .perla-features {
+        grid-template-columns:1fr;
+        padding:60px 6%;
+        gap:20px;
+      }
+
+      .feature {
+        min-height:auto;
+      }
+
+      .feature h3 {
+        font-size:20px;
+      }
+.cta-logo {
+  width:150px;
+  margin-bottom:24px;
+}
+      .perla-cta {
+        padding:70px 6%;
+      }
+
+      .perla-cta h2 {
+        font-size:32px;
+      }
+
+      .btn {
+        margin-bottom:12px;
+      }
+    }
+    /* BLOQUE FINAL RESERVA PERLA */
+.booking-wrap {
+  margin-top:0;
+}
+
+.booking-brand {
+  background:#ffffff;
+  padding:42px 7% 26px;
+  text-align:center;
+}
+
+.booking-logo {
+  width:170px;
+  height:auto;
+  display:inline-block;
+}
+
+.booking-cta {
+  background:#243B7A;
+  color:white;
+  padding:40px 7% 60px;
+  text-align:center;
+}
+
+.booking-kicker {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:13px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.booking-cta h2 {
+  font-size:56px;
+  line-height:1.08;
+  font-weight:300;
+  max-width:780px;
+  margin:0 auto 24px;
+}
+
+.booking-cta p {
+  font-size:18px;
+  line-height:1.8;
+  font-weight:300;
+  max-width:720px;
+  margin:0 auto 36px;
+}
+
+.booking-buttons {
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.booking-cta .btn {
+  display:inline-block;
+  background:#ff5b16;
+  color:white;
+  padding:16px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:600;
+}
+
+.booking-cta .btn-secondary {
+  background:transparent;
+  border:1px solid rgba(255,255,255,.75);
+}
+    @media(max-width:800px) {
+  .booking-brand {
+    padding:34px 6% 20px;
+  }
+
+  .booking-logo {
+    width:135px;
+  }
+
+  .booking-cta {
+    padding:34px 6% 46px;
+  }
+
+  .booking-cta h2 {
+    font-size:36px;
+  }
+
+  .booking-cta p {
+    font-size:16px;
+  }
+
+  .booking-buttons {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .booking-buttons .btn {
+    width:100%;
+    max-width:320px;
+    text-align:center;
+  }
+}
+    /* AJUSTE FINAL MÓVIL PERLA */
+html {
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+@media(max-width:800px) {
+
+  body {
+    overflow-x:hidden;
+  }
+
+  header {
+    padding:28px 6% !important;
+    align-items:flex-start !important;
+  }
+
+  .logo {
+    width:190px !important;
+  }
+
+  header nav {
+    display:none !important;
+  }
+
+  .hero-perla {
+    min-height:92vh !important;
+    padding:150px 6% 60px !important;
+    background-position:center center !important;
+  }
+
+  .label {
+    font-size:11px !important;
+    letter-spacing:2px !important;
+    margin-bottom:16px !important;
+  }
+
+  h1 {
+    font-size:38px !important;
+    line-height:1.02 !important;
+    letter-spacing:1px !important;
+    margin-bottom:24px !important;
+  }
+
+  .hero-content p {
+    font-size:17px !important;
+    line-height:1.65 !important;
+    margin-bottom:28px !important;
+  }
+
+  .btn {
+    display:block !important;
+    width:100% !important;
+    max-width:320px !important;
+    text-align:center !important;
+    margin:0 0 14px 0 !important;
+    padding:15px 20px !important;
+    font-size:11px !important;
+  }
+
+  .quick-info {
+    padding:34px 6% !important;
+  }
+
+  .info-grid {
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+  }
+
+  .info-item {
+    padding:18px 16px !important;
+  }
+
+  .info-item strong {
+    font-size:26px !important;
+  }
+
+  .info-item span {
+    font-size:10px !important;
+    letter-spacing:1.2px !important;
+  }
+
+  .gallery-header h2,
+  .intro-perla h2,
+  .details-header h2,
+  .perla-cta h2 {
+    font-size:30px !important;
+    line-height:1.15 !important;
+    letter-spacing:0 !important;
+  }
+
+  .perla-details {
+    padding:58px 6% !important;
+  }
+
+  .details-header {
+    margin-bottom:32px !important;
+  }
+
+  .details-header span {
+    font-size:11px !important;
+    letter-spacing:2px !important;
+  }
+
+  .distribution {
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  .distribution div {
+    padding:24px !important;
+  }
+
+  .distribution h3 {
+    font-size:20px !important;
+    line-height:1.05 !important;
+    letter-spacing:1.4px !important;
+    margin-bottom:14px !important;
+  }
+
+  .distribution p {
+    font-size:15px !important;
+    line-height:1.6 !important;
+  }
+
+  .services {
+    grid-template-columns:1fr !important;
+    padding:24px !important;
+    gap:16px !important;
+  }
+
+  .services span {
+    font-size:15px !important;
+    line-height:1.5 !important;
+  }
+
+  .perla-features {
+    grid-template-columns:1fr !important;
+    padding:58px 6% !important;
+  }
+
+  .feature h3 {
+    font-size:20px !important;
+    line-height:1.15 !important;
+  }
+}
+    .hero-claim {
+  font-size:28px !important;
+  line-height:1.25 !important;
+  font-weight:300 !important;
+  max-width:620px !important;
+  margin-bottom:24px !important;
+}
+    @media(max-width:800px) {
+  .hero-claim {
+    font-size:22px !important;
+    line-height:1.3 !important;
+    margin-bottom:22px !important;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">
+    <img class="logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
+  </a>
+
+  <nav>
+    <a href="index.html#apartamentos">Apartamentos</a>
+    <a href="index.html#peniscola-marevostrum">Peñíscola</a>
+    <a href="index.html#contacto">Contacto</a>
+    <a class="whatsapp" href="#reserva">Disponibilidad</a>
+  </nav>
+</header>
+
+<section class="hero-perla">
+  <div class="hero-content">
+   <span class="label">Apartamento Marevostrum</span>
+
+<h1>Apartamento Perla</h1>
+
+<p class="hero-claim">
+  Peñíscola entera delante, silencio detrás.
+</p>
+
+<p>
+  Vistas, calma y aparcamiento fácil. Un apartamento para mirar el mar,
+  teletrabajar con luz natural y volver a casa sin el ruido del centro.
+</p>
+
+    <a class="btn" href="#reserva">Consultar disponibilidad</a>
+    <a class="btn btn-secondary" href="index.html">Volver</a>
+  </div>
+</section>
+
+<section class="quick-info">
+
+  <div class="info-grid">
+    <div class="info-item">
+      <strong>5</strong>
+      <span>huéspedes</span>
+    </div>
+
+    <div class="info-item">
+      <strong>2</strong>
+      <span>dormitorios</span>
+    </div>
+
+    <div class="info-item">
+      <strong>3</strong>
+      <span>camas</span>
+    </div>
+
+    <div class="info-item">
+      <strong>+</strong>
+      <span>sofá grande</span>
+    </div>
+
+    <div class="info-item">
+      <strong>1</strong>
+      <span>baño</span>
+    </div>
+
+    <div class="info-item">
+      <strong>65</strong>
+      <span>m²</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="perla-gallery">
+
+  <div class="gallery-header">
+    <span>El apartamento</span>
+    <h2>Espacios sencillos, luz mediterránea y vistas abiertas.</h2>
+  </div>
+
+  <div class="gallery-grid">
+    <img class="gallery-large" src="images/apartamentos/perla/perla-1-nueva.jpg" alt="Salón y cocina del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/cocina-perla.jpg" alt="Detalle de la cocina del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/habitacion-perla-1.jpg" alt="Dormitorio principal del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/habitacion-perla-2.jpg" alt="Habitación con literas del Apartamento Perla">
+
+    <img src="images/apartamentos/perla/piscina-perla.jpg" alt="Piscina del Apartamento Perla">
+  </div>
+
+</section>
+
+<section class="intro-perla">
+  <div>
+    <h2>Vistas, calma y aparcamiento fácil.</h2>
+  </div>
+
+  <div>
+    <p>
+      Perla está en la montaña, muy cerca de Peñíscola. No compite con el centro:
+      propone otra forma de estar aquí, con más aire, mejores vistas y la comodidad
+      de aparcar sin dar vueltas.
+    </p>
+  </div>
+</section>
+
+<section class="perla-details">
+
+  <div class="details-header">
+    <span>Distribución y servicios</span>
+    <h2>Todo lo necesario para una estancia cómoda.</h2>
+  </div>
+
+  <div class="distribution">
+    <div>
+      <h3>Dormitorio principal</h3>
+      <p>Una cama doble de matrimonio.</p>
+    </div>
+
+    <div>
+      <h3>Dormitorio 2</h3>
+      <p>Dos camas en litera.</p>
+    </div>
+
+    <div>
+      <h3>Salón</h3>
+      <p>Sofá grande apto para un huésped.</p>
+    </div>
+  </div>
+
+  <div class="services">
+    <span>Piscina comunitaria</span>
+    <span>Wifi</span>
+    <span>Aire acondicionado</span>
+    <span>Toallas incluidas</span>
+    <span>Permitido fumar</span>
+  </div>
+
+</section>
+
+<section class="perla-features">
+
+  <div class="feature">
+    <span>01</span>
+    <h3>Vistas panorámicas</h3>
+    <p>Peñíscola, el castillo y el Mediterráneo abiertos frente a ti.</p>
+  </div>
+
+  <div class="feature">
+    <span>02</span>
+    <h3>Aparcar sin vueltas</h3>
+    <p>Llegar, dejar el coche y olvidarse de buscar sitio en el centro.</p>
+  </div>
+
+  <div class="feature">
+    <span>03</span>
+    <h3>Teletrabajar mirando al mar</h3>
+    <p>Luz natural, calma y una vista que cambia el ritmo del día.</p>
+  </div>
+
+  <div class="feature">
+    <span>04</span>
+    <h3>Playa, monte y bici</h3>
+    <p>Una base tranquila para moverse entre mar, rutas y naturaleza.</p>
+  </div>
+
+</section>
+
+<section class="perla-cta" id="reserva">
+
+  <img class="cta-logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
+
+  <span>Reserva Perla</span>
+
+  <h2>Un apartamento para mirar Peñíscola con calma.</h2>
+
+  <p>
+    Consulta disponibilidad y prepara una estancia con vistas al mar,
+    espacio cómodo y una terraza pensada para quedarse.
+  </p>
+
+  <a class="btn" href="index.html#contacto">Consultar disponibilidad</a>
+  <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
+
+</section>
+
+</body>
+</html>
