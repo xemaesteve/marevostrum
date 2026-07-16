@@ -733,6 +733,136 @@
   object-fit:cover;
   display:block;
 }
+            /* PEÑÍSCOLA SEGÚN MAREVOSTRUM - LIBRETA */
+.marevostrum-notebook {
+  background:#fff;
+  padding:95px 7%;
+  color:#243B7A;
+  overflow:hidden;
+}
+
+.notebook-layout {
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:58px;
+  align-items:center;
+}
+
+.notebook-copy {
+  position:relative;
+  background:#f7f4ee;
+  padding:54px 52px;
+  border-left:8px solid #ff5b16;
+}
+
+.notebook-kicker {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.notebook-copy h2 {
+  font-size:52px;
+  line-height:1.02;
+  font-weight:300;
+  letter-spacing:.5px;
+  margin-bottom:26px;
+}
+
+.notebook-copy p {
+  font-size:16px;
+  line-height:1.85;
+  font-weight:300;
+  max-width:560px;
+}
+
+.notebook-note {
+  display:inline-block;
+  margin-top:34px;
+  background:#ff5b16;
+  color:white;
+  padding:16px 22px;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:600;
+  letter-spacing:.5px;
+  transform:rotate(-1.5deg);
+}
+
+.notebook-image-wrap {
+  position:relative;
+  transform:rotate(1deg);
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+}
+
+.notebook-image-wrap img {
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  display:block;
+}
+
+.notebook-stamp {
+  position:absolute;
+  left:-22px;
+  top:28px;
+  background:#243B7A;
+  color:white;
+  padding:13px 18px;
+  text-transform:uppercase;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:600;
+  transform:rotate(-3deg);
+}
+            @media(max-width:800px) {
+  .marevostrum-notebook {
+    padding:70px 6%;
+  }
+
+  .notebook-layout {
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .notebook-copy {
+    padding:38px 30px;
+    border-left:6px solid #ff5b16;
+  }
+
+  .notebook-copy h2 {
+    font-size:36px;
+    line-height:1.08;
+  }
+
+  .notebook-copy p {
+    font-size:16px;
+    line-height:1.75;
+  }
+
+  .notebook-note {
+    font-size:13px;
+    transform:rotate(-1deg);
+  }
+
+  .notebook-image-wrap {
+    transform:none;
+  }
+
+  .notebook-image-wrap img {
+    height:330px;
+  }
+
+  .notebook-stamp {
+    left:18px;
+    top:18px;
+    transform:rotate(-2deg);
+  }
+}
   </style>
           
 </head>
@@ -818,32 +948,36 @@
 </div>
   </div>
 </section>
-<section class="marevostrum-guide" id="peniscola-marevostrum">
-<div class="guide-header">
-  <span>Peñíscola según Marevostrum</span>
+<section class="marevostrum-guide marevostrum-notebook" id="peniscola-marevostrum">
 
-  <h2>Compartimos contigo dónde nos gusta comer.</h2>
+  <div class="notebook-layout">
 
-  <p>
-    No queremos hacer una guía genérica de Peñíscola. Preferimos recomendar solo
-    los lugares que conocemos de verdad: mesas sencillas, buen producto y sitios
-    a los que volveríamos.
-  </p>
-</div>
+    <div class="notebook-copy">
+      <span class="notebook-kicker">Peñíscola según Marevostrum</span>
 
-<div class="food-feature">
+      <h2>Sitios a los que volvemos y por qué.</h2>
 
-  <div class="food-feature-text">
-    <h3>Comer</h3>
-    <p>
-      Restaurantes, bares y mesas sencillas a las que volveríamos sin pensarlo.
-      Lugares donde el producto, el trato y el momento importan más que hacer una lista larga.
-    </p>
+      <p>
+        No tenemos relación comercial con estos lugares. Los compartimos porque
+        forman parte de nuestra manera de vivir Peñíscola: a veces por un plato
+        concreto, por una barra, por una terraza o por ese momento al que apetece volver.
+      </p>
+
+      <div class="notebook-note">
+        Recomendamos momentos, no rankings.
+      </div>
+    </div>
+
+    <div class="notebook-image-wrap">
+      <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Sitios donde comer en Peñíscola según Marevostrum">
+
+      <div class="notebook-stamp">
+        Nuestra libreta
+      </div>
+    </div>
+
   </div>
 
-  <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola según Marevostrum">
-
-</div>
 </section>
 <footer id="contacto">
   <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
