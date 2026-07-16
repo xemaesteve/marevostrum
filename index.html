@@ -678,9 +678,7 @@
 .card-title-link:hover {
   color:#ff5b16;
 }
-.guide-grid-single {
-  grid-template-columns:minmax(0, 620px);
-}
+
 
 .guide-grid-single .guide-card {
   min-height:420px;
@@ -699,6 +697,41 @@
     height:320px;
     min-height:320px;
   }
+}
+            .food-feature {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:42px;
+  align-items:stretch;
+  margin-top:46px;
+}
+
+.food-feature-text {
+  background:#f7f4ee;
+  padding:42px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.food-feature-text h3 {
+  font-size:34px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.food-feature-text p {
+  font-size:16px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+.food-feature img {
+  width:100%;
+  height:460px;
+  object-fit:cover;
+  display:block;
 }
   </style>
           
@@ -798,15 +831,17 @@
   </p>
 </div>
 
-<div class="guide-grid guide-grid-single">
+<div class="food-feature">
 
-  <article class="guide-card">
-    <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola según Marevostrum">
-    <div class="guide-card-text">
-      <h3>Comer</h3>
-      <p>Restaurantes, bares y mesas a las que volveríamos sin pensarlo.</p>
-    </div>
-  </article>
+  <div class="food-feature-text">
+    <h3>Comer</h3>
+    <p>
+      Restaurantes, bares y mesas sencillas a las que volveríamos sin pensarlo.
+      Lugares donde el producto, el trato y el momento importan más que hacer una lista larga.
+    </p>
+  </div>
+
+  <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola según Marevostrum">
 
 </div>
 </section>
