@@ -950,21 +950,25 @@
     min-height:320px;
   }
 }
-            .notebook-image-wrap {
+  /* IMAGEN CLICABLE LIBRETA */
+.notebook-image-link {
   display:block;
   overflow:hidden;
   text-decoration:none;
   color:inherit;
-  cursor:pointer;
 }
 
-.notebook-image-wrap img {
+.notebook-image-link img {
   transition:transform .55s ease;
 }
 
-.notebook-image-wrap:hover img {
+.notebook-image-link:hover img {
   transform:scale(1.04);
 }
+
+.notebook-image-wrap {
+  cursor:pointer;
+}     
   </style>
           
 </head>
@@ -1075,13 +1079,17 @@
 
       <div class="notebook-stamp">
         Nuestra libreta
-   <a class="notebook-image-wrap" href="#peniscola-marevostrum">
-  <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Sitios donde comer en Peñíscola según Marevostrum">
+  <div class="notebook-image-wrap">
+
+  <a class="notebook-image-link" href="#peniscola-marevostrum">
+    <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Sitios donde comer en Peñíscola según Marevostrum">
+  </a>
 
   <div class="notebook-stamp">
     Nuestra libreta
   </div>
-</a>
+
+</div>
 </section>
 <footer id="contacto">
   <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
