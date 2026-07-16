@@ -863,6 +863,93 @@
     transform:rotate(-2deg);
   }
 }
+            /* AJUSTE FINAL PEÑÍSCOLA SEGÚN MAREVOSTRUM */
+.marevostrum-notebook {
+  padding:90px 7%;
+}
+
+.notebook-layout {
+  grid-template-columns:minmax(420px, .9fr) minmax(520px, 1.1fr);
+  gap:56px;
+  align-items:stretch;
+}
+
+.notebook-copy {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.notebook-copy h2 {
+  font-size:clamp(42px, 4vw, 60px);
+  line-height:1.02;
+  max-width:680px;
+}
+
+.notebook-copy p {
+  max-width:640px;
+}
+
+.notebook-image-wrap {
+  height:100%;
+  min-height:500px;
+}
+
+.notebook-image-wrap img {
+  height:100%;
+  min-height:500px;
+  object-fit:cover;
+}
+            @media(max-width:1100px) {
+  .notebook-layout {
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .notebook-copy {
+    padding:46px 42px;
+  }
+
+  .notebook-copy h2 {
+    font-size:44px;
+    max-width:720px;
+  }
+
+  .notebook-image-wrap {
+    min-height:420px;
+  }
+
+  .notebook-image-wrap img {
+    min-height:420px;
+    height:420px;
+  }
+}
+            @media(max-width:800px) {
+  .marevostrum-notebook {
+    padding:70px 6%;
+  }
+
+  .notebook-copy {
+    padding:36px 30px;
+  }
+
+  .notebook-copy h2 {
+    font-size:36px;
+    line-height:1.08;
+  }
+
+  .notebook-copy p {
+    font-size:16px;
+    line-height:1.75;
+  }
+
+  .notebook-image-wrap,
+  .notebook-image-wrap img {
+    height:320px;
+    min-height:320px;
+  }
+}
   </style>
           
 </head>
