@@ -950,25 +950,73 @@
     min-height:320px;
   }
 }
-  /* IMAGEN CLICABLE LIBRETA */
-.notebook-image-link {
-  display:block;
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-}
-
-.notebook-image-link img {
-  transition:transform .55s ease;
-}
-
-.notebook-image-link:hover img {
-  transform:scale(1.04);
-}
-
+ /* RESET IMAGEN LIBRETA */
 .notebook-image-wrap {
-  cursor:pointer;
-}     
+  position:relative !important;
+  overflow:visible !important;
+  transform:rotate(1deg) !important;
+  box-shadow:0 18px 38px rgba(0,0,0,.14) !important;
+}
+
+.notebook-photo-link {
+  display:block !important;
+  overflow:hidden !important;
+  border:0 !important;
+  outline:0 !important;
+  text-decoration:none !important;
+  color:inherit !important;
+}
+
+.notebook-photo-link:focus,
+.notebook-photo-link:active {
+  outline:0 !important;
+  border:0 !important;
+}
+
+.notebook-photo-link img {
+  width:100% !important;
+  height:500px !important;
+  object-fit:cover !important;
+  display:block !important;
+  border:0 !important;
+  outline:0 !important;
+  transition:transform .55s ease !important;
+}
+
+.notebook-photo-link:hover img {
+  transform:scale(1.04) !important;
+}
+
+.notebook-stamp {
+  position:absolute !important;
+  left:-22px !important;
+  top:28px !important;
+  background:#243B7A !important;
+  color:white !important;
+  padding:13px 18px !important;
+  text-transform:uppercase !important;
+  font-size:11px !important;
+  letter-spacing:2px !important;
+  font-weight:600 !important;
+  transform:rotate(-3deg) !important;
+  z-index:5 !important;
+  pointer-events:none !important;
+}
+@media(max-width:800px) {
+  .notebook-image-wrap {
+    transform:none !important;
+  }
+
+  .notebook-photo-link img {
+    height:320px !important;
+  }
+
+  .notebook-stamp {
+    left:18px !important;
+    top:18px !important;
+    transform:rotate(-2deg) !important;
+  }
+}
   </style>
           
 </head>
@@ -1075,19 +1123,14 @@
     </div>
 
     <div class="notebook-image-wrap">
-      <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Sitios donde comer en Peñíscola según Marevostrum">
 
-      <div class="notebook-stamp">
-        Nuestra libreta
-  <div class="notebook-image-wrap">
-
-  <a class="notebook-image-link" href="#peniscola-marevostrum">
+  <a class="notebook-photo-link" href="#peniscola-marevostrum" aria-label="Ver recomendaciones de Marevostrum en Peñíscola">
     <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Sitios donde comer en Peñíscola según Marevostrum">
   </a>
 
-  <div class="notebook-stamp">
-    Nuestra libreta
-  </div>
+  <span class="notebook-stamp">Nuestra libreta</span>
+
+</div>
 
 </div>
 </section>
