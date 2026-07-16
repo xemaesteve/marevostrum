@@ -678,7 +678,30 @@
 .card-title-link:hover {
   color:#ff5b16;
 }
+.guide-grid-single {
+  grid-template-columns:minmax(0, 620px);
+}
+
+.guide-grid-single .guide-card {
+  min-height:420px;
+}
+
+.guide-grid-single .guide-card img {
+  height:420px;
+}
+            @media(max-width:800px) {
+  .guide-grid-single {
+    grid-template-columns:1fr;
+  }
+
+  .guide-grid-single .guide-card,
+  .guide-grid-single .guide-card img {
+    height:320px;
+    min-height:320px;
+  }
+}
   </style>
+          
 </head>
 
 <body>
@@ -766,41 +789,26 @@
 <div class="guide-header">
   <span>Peñíscola según Marevostrum</span>
 
-  <h2>Compartimos contigo nuestro Mediterráneo.</h2>
+  <h2>Compartimos contigo dónde nos gusta comer.</h2>
 
   <p>
-    Son los lugares y pequeñas costumbres a los que volvemos una y otra vez
-    cuando estamos aquí.
+    No queremos hacer una guía genérica de Peñíscola. Preferimos recomendar solo
+    los lugares que conocemos de verdad: mesas sencillas, buen producto y sitios
+    a los que volveríamos.
   </p>
 </div>
 
-<div class="guide-grid">
+<div class="guide-grid guide-grid-single">
 
-    <article class="guide-card">
-      <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola">
-      <div class="guide-card-text">
-        <h3>Comer</h3>
-        <p>Mesas sencillas, producto bueno y tiempo para quedarse.</p>
-      </div>
-    </article>
+  <article class="guide-card">
+    <img src="images/peniscola-segun-marevostrum/restaurantes.jpg" alt="Comer en Peñíscola según Marevostrum">
+    <div class="guide-card-text">
+      <h3>Comer</h3>
+      <p>Restaurantes, bares y mesas a las que volveríamos sin pensarlo.</p>
+    </div>
+  </article>
 
-    <article class="guide-card">
-      <img src="images/peniscola-segun-marevostrum/calas.jpg" alt="Calas de Peñíscola">
-      <div class="guide-card-text">
-        <h3>Bañarse</h3>
-        <p>Playas y calas para entrar al agua sin prisa.</p>
-      </div>
-    </article>
-
-    <article class="guide-card">
-      <img src="images/peniscola-segun-marevostrum/naturaleza.jpg" alt="Naturaleza en Peñíscola">
-      <div class="guide-card-text">
-     <h3>Aire libre</h3>
-<p>Paseos, rutas y pequeños planes al aire libre junto al mar.</p>
-      </div>
-    </article>
-
-  </div>
+</div>
 </section>
 <footer id="contacto">
   <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
