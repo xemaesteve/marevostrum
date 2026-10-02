@@ -1321,6 +1321,9 @@ footer a:hover {
 }
 
 .hosts-button {
+          border:0;
+cursor:pointer;
+font-family:inherit;
   display:inline-flex;
   align-items:center;
   gap:18px;
@@ -1890,9 +1893,15 @@ footer a:hover {
         Hoy queremos compartir nuestros rincones y nuestra forma de vivir Peñíscola.
       </p>
 
-      <a href="#contacto" class="hosts-button">
-        Conócenos <span>→</span>
-      </a>
+      <button
+  type="button"
+  class="hosts-button"
+  id="toggle-sitios"
+  aria-expanded="false"
+  aria-controls="sitios-marevostrum"
+>
+  Sitios a los que volvemos y por qué <span>↓</span>
+</button>
 
     </div>
 
@@ -1930,7 +1939,6 @@ footer a:hover {
   <div class="hosts-places-grid">
 
     <article class="host-place">
-      <span class="host-place-number">01</span>
       <h4>Tasca Pepe</h4>
       <p>
         Un picoteo, cervezas, el mar y la gente de toda la vida.
@@ -1938,7 +1946,6 @@ footer a:hover {
     </article>
 
     <article class="host-place">
-      <span class="host-place-number">02</span>
       <h4>El Cañar</h4>
       <p>
         La comida de toda la vida hecha con un cariño increíble.
@@ -1947,7 +1954,6 @@ footer a:hover {
     </article>
 
     <article class="host-place">
-      <span class="host-place-number">03</span>
       <h4>El Rebost</h4>
       <p>
         Llevado por una familia, en una calle llena de vida,
@@ -1956,7 +1962,6 @@ footer a:hover {
     </article>
 
     <article class="host-place">
-      <span class="host-place-number">04</span>
       <h4>Restaurante Porteta</h4>
       <p>
         Un mirador al mar para cenar con el Mediterráneo delante
@@ -1992,6 +1997,30 @@ footer a:hover {
     Aviso legal · Privacidad · Cookies
   </p>
 </footer>
+<script>
+  const toggleSitios = document.getElementById('toggle-sitios');
+  const sitiosMarevostrum = document.getElementById('sitios-marevostrum');
 
+  toggleSitios.addEventListener('click', function () {
+    const abierto = !sitiosMarevostrum.hasAttribute('hidden');
+
+    if (abierto) {
+      sitiosMarevostrum.setAttribute('hidden', '');
+      toggleSitios.setAttribute('aria-expanded', 'false');
+      toggleSitios.querySelector('span').textContent = '↓';
+    } else {
+      sitiosMarevostrum.removeAttribute('hidden');
+      toggleSitios.setAttribute('aria-expanded', 'true');
+      toggleSitios.querySelector('span').textContent = '↑';
+
+      setTimeout(() => {
+        sitiosMarevostrum.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 50);
+    }
+  });
+</script>
 </body>
 </html>
