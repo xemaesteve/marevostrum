@@ -1646,6 +1646,120 @@ footer a:hover {
     font-size: 15px;
   }
 }
+            ...
+@media(max-width:800px) {
+   ...
+}
+
+
+/* SITIOS DE PACO Y NOE */
+
+.hosts-places {
+  position:relative;
+  z-index:10;
+  max-width:1280px;
+  margin:20px auto 0;
+  padding:75px 45px 85px;
+  border-top:1px solid rgba(36,59,122,.18);
+}
+
+.hosts-places-heading {
+  max-width:720px;
+  margin-bottom:48px;
+}
+
+.hosts-places-heading h3 {
+  margin:0 0 18px;
+  color:#243B7A;
+  font-size:44px;
+  line-height:1.05;
+  font-weight:300;
+  letter-spacing:-1px;
+}
+
+.hosts-places-heading p {
+  max-width:600px;
+  margin:0;
+  color:#243B7A;
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.hosts-places-grid {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1px;
+  background:rgba(36,59,122,.16);
+  border:1px solid rgba(36,59,122,.16);
+}
+
+.host-place {
+  position:relative;
+  min-height:230px;
+  padding:38px;
+  background:#f7f4ee;
+}
+
+.host-place-number {
+  display:block;
+  margin-bottom:34px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+}
+
+.host-place h4 {
+  margin:0 0 14px;
+  color:#243B7A;
+  font-size:27px;
+  font-weight:400;
+}
+
+.host-place p {
+  max-width:460px;
+  margin:0;
+  color:#243B7A;
+  font-size:15px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.hosts-places-note {
+  margin:32px 0 0;
+  color:#ff5b16;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+@media(max-width:800px) {
+
+  .hosts-places {
+    padding:55px 25px 65px;
+  }
+
+  .hosts-places-heading h3 {
+    font-size:34px;
+  }
+
+  .hosts-places-grid {
+    grid-template-columns:1fr;
+  }
+
+  .host-place {
+    min-height:0;
+    padding:30px 25px;
+  }
+
+  .host-place-number {
+    margin-bottom:20px;
+  }
+}
+
+</style>
   </style>
           
 </head>
@@ -1747,7 +1861,63 @@ footer a:hover {
       Quiero saber más
     </a>
   </div>
+<div class="hosts-places" id="sitios-marevostrum">
 
+  <div class="hosts-places-heading">
+    <span class="hosts-kicker">Nuestra Peñíscola</span>
+
+    <h3>Sitios a los que volvemos y por qué.</h3>
+
+    <p>
+      No es una lista de “los mejores”. Son lugares que forman parte
+      de nuestra manera de vivir Peñíscola.
+    </p>
+  </div>
+
+  <div class="hosts-places-grid">
+
+    <article class="host-place">
+      <span class="host-place-number">01</span>
+      <h4>Tasca Pepe</h4>
+      <p>
+        Un picoteo, cervezas, el mar y la gente de toda la vida.
+      </p>
+    </article>
+
+    <article class="host-place">
+      <span class="host-place-number">02</span>
+      <h4>El Cañar</h4>
+      <p>
+        La comida de toda la vida hecha con un cariño increíble.
+        Huye del bullicio y pide su tosta de pulpo.
+      </p>
+    </article>
+
+    <article class="host-place">
+      <span class="host-place-number">03</span>
+      <h4>El Rebost</h4>
+      <p>
+        Llevado por una familia, en una calle llena de vida,
+        donde poder comer unos buenos pescaditos fritos.
+      </p>
+    </article>
+
+    <article class="host-place">
+      <span class="host-place-number">04</span>
+      <h4>Restaurante Porteta</h4>
+      <p>
+        Un mirador al mar para cenar con el Mediterráneo delante
+        y disfrutar de la cocina de una familia del pueblo.
+      </p>
+    </article>
+
+  </div>
+
+  <p class="hosts-places-note">
+    Recomendamos momentos, no rankings.
+  </p>
+
+</div>
 </section>
 
 
