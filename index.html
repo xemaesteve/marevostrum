@@ -1134,6 +1134,129 @@ footer a:hover {
     font-size:16px;
   }
 }
+            /* ANFITRIONES */
+.hosts-section {
+  padding: 90px 7%;
+  background: #f7f4ee;
+}
+
+.hosts-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hosts-photo {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      #f7f4ee 0%,
+      #f7f4ee 38%,
+      #243B7A 38%,
+      #243B7A 100%
+    );
+}
+
+.hosts-photo img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.hosts-content {
+  max-width: 560px;
+}
+
+.hosts-kicker {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #ff5b16;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.hosts-content h2 {
+  margin: 0 0 28px;
+  color: #243B7A;
+  font-size: 52px;
+  line-height: 1.04;
+  font-weight: 300;
+}
+
+.hosts-intro {
+  margin-bottom: 18px;
+  color: #243B7A;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hosts-content p {
+  margin-bottom: 16px;
+  color: #243B7A;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+@media (max-width: 950px) {
+  .hosts-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hosts-photo {
+    min-height: 420px;
+  }
+
+  .hosts-photo img {
+    width: 78%;
+    max-width: 520px;
+  }
+
+  .hosts-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hosts-section {
+    padding: 65px 6%;
+  }
+
+  .hosts-photo {
+    min-height: 330px;
+  }
+
+  .hosts-photo img {
+    width: 96%;
+  }
+
+  .hosts-content h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .hosts-intro {
+    font-size: 17px;
+  }
+
+  .hosts-content p {
+    font-size: 15px;
+  }
+}
   </style>
           
 </head>
@@ -1271,6 +1394,33 @@ footer a:hover {
 </div>
 
 </div>
+</section>
+          <section class="hosts-section" id="anfitriones">
+  <div class="hosts-inner">
+
+    <div class="hosts-photo">
+      <img src="images/lifestyle/anfitriones.png" alt="Anfitriones de Marevostrum">
+    </div>
+
+    <div class="hosts-content">
+      <span class="hosts-kicker">Marevostrum en persona</span>
+
+      <h2>Quienes hay detrás de Marevostrum.</h2>
+
+      <p class="hosts-intro">
+        Marevostrum nació de nuestras escapadas a Peñíscola:
+        venir para bajar el ritmo, pasear, comer bien, beber algo frente al mar
+        y alejarnos un poco del ruido.
+      </p>
+
+      <p>
+        Con el tiempo, esos momentos se convirtieron en algo más.
+        Hoy queremos compartir nuestros rincones y nuestra forma de vivir Peñíscola
+        para que cada estancia pueda convertirse también en un recuerdo.
+      </p>
+    </div>
+
+  </div>
 </section>
 <footer id="contacto">
   <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
