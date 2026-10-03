@@ -1931,6 +1931,85 @@ font-family:inherit;
     top:39%;
   }
 }
+            /* NOMBRES PACO Y NOE - ESTILO MANUSCRITO */
+
+.host-name {
+  position:absolute;
+  z-index:8;
+
+  padding:0;
+  background:none;
+  border:0;
+  border-radius:0;
+
+  color:#ff5b16;
+
+  font-family:'DK Lemon Yellow Sun', cursive;
+  font-size:30px;
+  font-weight:400;
+  letter-spacing:.5px;
+  text-transform:none;
+
+  opacity:0;
+  transform:translateY(8px);
+
+  transition:
+    opacity .35s ease,
+    transform .5s cubic-bezier(.22,1,.36,1);
+
+  pointer-events:none;
+}
+
+/* Noe abajo de su lado */
+.host-name-noe {
+  left:31%;
+  top:auto;
+  bottom:22px;
+  transform:translateY(8px) rotate(-4deg);
+}
+
+/* Paco abajo de su lado */
+.host-name-paco {
+  right:19%;
+  top:auto;
+  bottom:18px;
+  transform:translateY(8px) rotate(3deg);
+}
+
+.hosts-visual:hover .host-name-noe {
+  opacity:1;
+  transform:translateY(0) rotate(-4deg);
+}
+
+.hosts-visual:hover .host-name-paco {
+  opacity:1;
+  transform:translateY(0) rotate(3deg);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .host-name {
+    opacity:1;
+    font-size:26px;
+  }
+
+  .host-name-noe {
+    left:19%;
+    top:auto;
+    bottom:14px;
+    transform:rotate(-4deg);
+  }
+
+  .host-name-paco {
+    right:12%;
+    top:auto;
+    bottom:12px;
+    transform:rotate(3deg);
+  }
+}
   </style>
           
 </head>
