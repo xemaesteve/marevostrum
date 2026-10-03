@@ -1853,7 +1853,84 @@ font-family:inherit;
     padding-bottom:65px;
   }
 }
-</style>
+/* ANIMACIÓN PACO Y NOE */
+
+.hosts-visual img {
+  transition:
+    transform .7s cubic-bezier(.22,1,.36,1),
+    filter .5s ease;
+}
+
+.hosts-visual:hover img {
+  transform:scale(1.035) translateY(-4px);
+}
+
+
+/* NOMBRES */
+
+.host-name {
+  position:absolute;
+  z-index:8;
+
+  padding:7px 13px;
+
+  background:#ff5b16;
+  color:#fff;
+
+  border-radius:20px;
+
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+
+  opacity:0;
+  transform:translateY(8px);
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,1,.36,1);
+
+  pointer-events:none;
+}
+
+.host-name-noe {
+  left:34%;
+  top:30%;
+}
+
+.host-name-paco {
+  right:18%;
+  top:37%;
+}
+
+.hosts-visual:hover .host-name {
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* MÓVIL: los nombres siempre visibles */
+
+@media(max-width:800px) {
+
+  .host-name {
+    opacity:1;
+    transform:none;
+    font-size:10px;
+    padding:6px 11px;
+  }
+
+  .host-name-noe {
+    left:23%;
+    top:30%;
+  }
+
+  .host-name-paco {
+    right:12%;
+    top:39%;
+  }
+}
   </style>
           
 </head>
@@ -2011,7 +2088,8 @@ font-family:inherit;
         src="images/lifestyle/anfitriones.png"
         alt="Anfitriones de Marevostrum"
       >
-
+<span class="host-name host-name-noe">Noe</span>
+<span class="host-name host-name-paco">Paco</span>
     </div>
             </div>
             <div class="hosts-places" id="sitios-marevostrum">
