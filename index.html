@@ -1815,6 +1815,44 @@ font-family:inherit;
     letter-spacing:1.4px;
   }
 }
+            /* DESPLIEGUE ORGÁNICO DE LOS SITIOS */
+
+.hosts-places {
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transform:translateY(-18px);
+
+  margin-top:0;
+  padding-top:0;
+  padding-bottom:0;
+
+  transition:
+    max-height .9s cubic-bezier(.22,1,.36,1),
+    opacity .45s ease,
+    transform .65s cubic-bezier(.22,1,.36,1),
+    margin-top .65s ease,
+    padding-top .65s ease,
+    padding-bottom .65s ease;
+}
+
+.hosts-places.is-open {
+  max-height:1800px;
+  opacity:1;
+  transform:translateY(0);
+
+  margin-top:20px;
+  padding-top:75px;
+  padding-bottom:85px;
+}
+
+@media(max-width:800px) {
+
+  .hosts-places.is-open {
+    padding-top:55px;
+    padding-bottom:65px;
+  }
+}
 </style>
   </style>
           
@@ -2091,24 +2129,22 @@ font-family:inherit;
   const sitiosMarevostrum = document.getElementById('sitios-marevostrum');
 
   toggleSitios.addEventListener('click', function () {
-    const abierto = !sitiosMarevostrum.hasAttribute('hidden');
+
+    const abierto = sitiosMarevostrum.classList.toggle('is-open');
+
+    toggleSitios.setAttribute('aria-expanded', abierto);
+
+    toggleSitios.querySelector('span').textContent = abierto ? '↑' : '↓';
 
     if (abierto) {
-      sitiosMarevostrum.setAttribute('hidden', '');
-      toggleSitios.setAttribute('aria-expanded', 'false');
-      toggleSitios.querySelector('span').textContent = '↓';
-    } else {
-      sitiosMarevostrum.removeAttribute('hidden');
-      toggleSitios.setAttribute('aria-expanded', 'true');
-      toggleSitios.querySelector('span').textContent = '↑';
-
       setTimeout(() => {
         sitiosMarevostrum.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
-      }, 50);
+      }, 300);
     }
+
   });
 </script>
 </body>
