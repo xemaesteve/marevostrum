@@ -1964,7 +1964,7 @@ font-family:inherit;
 .host-name-noe {
   left:31%;
   top:auto;
-  bottom:-22px;
+  bottom:-12px;
   transform:translateY(8px) rotate(-4deg);
 }
 
@@ -1972,7 +1972,7 @@ font-family:inherit;
 .host-name-paco {
   right:19%;
   top:auto;
-  bottom:-22px;
+  bottom:-14px;
   transform:translateY(8px) rotate(3deg);
 }
 
@@ -2293,146 +2293,6 @@ font-family:inherit;
 .host-name {
   display:block !important;
 }
-            /* POSICIÓN DEFINITIVA NOMBRES ANFITRIONES */
-
-.hosts-inner {
-  position:relative;
-}
-
-.host-name {
-  display:block !important;
-  position:absolute !important;
-  z-index:20 !important;
-
-  padding:0 !important;
-  background:none !important;
-  border:0 !important;
-
-  color:#ff5b16 !important;
-  font-family:'DK Lemon Yellow Sun', cursive !important;
-  font-size:30px !important;
-  font-weight:400 !important;
-  line-height:1 !important;
-  text-transform:none !important;
-
-  opacity:0;
-  pointer-events:none;
-
-  transition:
-    opacity .35s ease,
-    transform .45s ease;
-}
-
-/* YA ESTÁN REALMENTE DEBAJO DE LA FOTO */
-
-.host-name-noe {
-  left:64% !important;
-  bottom:-16px !important;
-  transform:rotate(-4deg);
-}
-
-.host-name-paco {
-  right:9% !important;
-  bottom:-16px !important;
-  transform:rotate(3deg);
-}
-
-.hosts-visual:hover ~ .host-name {
-  opacity:1;
-}
-
-
-/* MÓVIL */
-
-@media(max-width:800px) {
-
-  .hosts-inner {
-    padding-bottom:35px;
-  }
-
-  .host-name {
-    opacity:1 !important;
-    font-size:25px !important;
-  }
-
-  .host-name-noe {
-    left:23% !important;
-    bottom:5px !important;
-  }
-
-  .host-name-paco {
-    right:17% !important;
-    bottom:5px !important;
-  }
-}
-  /* NOMBRES ANFITRIONES - DEBAJO DE LA FOTO */
-
-.hosts-right {
-  min-width:0;
-}
-
-.hosts-handnames {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:8px 17% 0 23%;
-  min-height:42px;
-
-  opacity:0;
-  transform:translateY(-5px);
-
-  transition:
-    opacity .35s ease,
-    transform .45s cubic-bezier(.22,1,.36,1);
-}
-
-.hosts-handname {
-  color:#ff5b16;
-
-  font-family:'DK Lemon Yellow Sun', cursive;
-  font-size:30px;
-  font-weight:400;
-  line-height:1;
-
-  pointer-events:none;
-}
-
-.hosts-handname-noe {
-  transform:rotate(-4deg);
-}
-
-.hosts-handname-paco {
-  transform:rotate(3deg);
-}
-
-.hosts-right:hover .hosts-handnames {
-  opacity:1;
-  transform:translateY(0);
-}
-
-
-/* Desactiva definitivamente los nombres antiguos */
-.host-name {
-  display:none !important;
-}
-
-
-/* MÓVIL */
-
-@media(max-width:800px) {
-
-  .hosts-handnames {
-    opacity:1;
-    transform:none;
-    padding:7px 14% 0 20%;
-    min-height:38px;
-  }
-
-  .hosts-handname {
-    font-size:25px;
-  }
-}
   </style>
           
 </head>
@@ -2587,30 +2447,11 @@ font-family:inherit;
 
   <img
     src="images/lifestyle/anfitriones.png"
-    <div class="hosts-right">
+    alt="Paco y Noe, anfitriones de Marevostrum"
+  >
 
-  <div class="hosts-visual">
-
-    <div class="hosts-blue"></div>
-    <div class="hosts-sun"></div>
-
-    <div class="hosts-rays">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <img
-      src="images/lifestyle/anfitriones.png"
-      alt="Paco y Noe, anfitriones de Marevostrum"
-    >
-
-  </div>
-
-  <div class="hosts-handnames">
-    <span class="hosts-handname hosts-handname-noe">Noe</span>
-    <span class="hosts-handname hosts-handname-paco">Paco</span>
-  </div>
+  <span class="host-name host-name-noe">Noe</span>
+  <span class="host-name host-name-paco">Paco</span>
 
 </div>
             <div class="hosts-places" id="sitios-marevostrum">
