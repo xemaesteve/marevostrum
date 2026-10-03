@@ -2293,6 +2293,78 @@ font-family:inherit;
 .host-name {
   display:block !important;
 }
+            /* POSICIÓN DEFINITIVA NOMBRES ANFITRIONES */
+
+.hosts-inner {
+  position:relative;
+}
+
+.host-name {
+  display:block !important;
+  position:absolute !important;
+  z-index:20 !important;
+
+  padding:0 !important;
+  background:none !important;
+  border:0 !important;
+
+  color:#ff5b16 !important;
+  font-family:'DK Lemon Yellow Sun', cursive !important;
+  font-size:30px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  text-transform:none !important;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:
+    opacity .35s ease,
+    transform .45s ease;
+}
+
+/* YA ESTÁN REALMENTE DEBAJO DE LA FOTO */
+
+.host-name-noe {
+  left:64% !important;
+  bottom:-16px !important;
+  transform:rotate(-4deg);
+}
+
+.host-name-paco {
+  right:9% !important;
+  bottom:-16px !important;
+  transform:rotate(3deg);
+}
+
+.hosts-visual:hover ~ .host-name {
+  opacity:1;
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-inner {
+    padding-bottom:35px;
+  }
+
+  .host-name {
+    opacity:1 !important;
+    font-size:25px !important;
+  }
+
+  .host-name-noe {
+    left:23% !important;
+    bottom:5px !important;
+  }
+
+  .host-name-paco {
+    right:17% !important;
+    bottom:5px !important;
+  }
+}
   </style>
           
 </head>
@@ -2450,10 +2522,10 @@ font-family:inherit;
     alt="Paco y Noe, anfitriones de Marevostrum"
   >
 
-  <span class="host-name host-name-noe">Noe</span>
-  <span class="host-name host-name-paco">Paco</span>
-
 </div>
+
+<span class="host-name host-name-noe">Noe</span>
+<span class="host-name host-name-paco">Paco</span>
             <div class="hosts-places" id="sitios-marevostrum">
 
   <div class="hosts-places-heading">
