@@ -2010,6 +2010,84 @@ font-family:inherit;
     transform:rotate(3deg);
   }
 }
+            /* PACO Y NOE - FIRMAS BAJO LA FOTO */
+
+/* Recuperamos la composición original */
+.hosts-visual {
+  position:relative;
+  overflow:hidden !important;
+  padding-bottom:0 !important;
+}
+
+.hosts-visual-wrap {
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Ocultamos las etiquetas anteriores por si queda alguna regla */
+.host-name {
+  display:none !important;
+}
+
+.hosts-signatures {
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:4px 14% 0 18%;
+
+  opacity:0;
+  transform:translateY(-5px);
+
+  transition:
+    opacity .4s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+.hosts-signature {
+  color:#ff5b16;
+  font-family:'DK Lemon Yellow Sun', cursive;
+  font-size:31px;
+  font-weight:400;
+  line-height:1;
+}
+
+.hosts-signature-noe {
+  transform:rotate(-4deg);
+}
+
+.hosts-signature-paco {
+  transform:rotate(3deg);
+}
+
+/* Aparecen al entrar en la zona de la foto */
+.hosts-visual-wrap:hover .hosts-signatures {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Pequeño movimiento de la foto */
+.hosts-visual-wrap:hover .hosts-visual img {
+  transform:scale(1.025);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-signatures {
+    opacity:1;
+    transform:none;
+    min-height:46px;
+    padding:5px 12% 0 16%;
+  }
+
+  .hosts-signature {
+    font-size:27px;
+  }
+}
   </style>
           
 </head>
@@ -2151,7 +2229,7 @@ font-family:inherit;
 </button>
 
     </div>
-
+<div class="hosts-visual-wrap">
     <div class="hosts-visual">
 
       <div class="hosts-blue"></div>
@@ -2162,13 +2240,17 @@ font-family:inherit;
         <span></span>
         <span></span>
       </div>
+<div class="hosts-signatures">
+  <span class="hosts-signature hosts-signature-noe">Noe</span>
+  <span class="hosts-signature hosts-signature-paco">Paco</span>
+</div>
 
+</div>
       <img
         src="images/lifestyle/anfitriones.png"
         alt="Anfitriones de Marevostrum"
       >
-<span class="host-name host-name-noe">Noe</span>
-<span class="host-name host-name-paco">Paco</span>
+
     </div>
             </div>
             <div class="hosts-places" id="sitios-marevostrum">
