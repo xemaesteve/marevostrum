@@ -2365,6 +2365,74 @@ font-family:inherit;
     bottom:5px !important;
   }
 }
+  /* NOMBRES ANFITRIONES - DEBAJO DE LA FOTO */
+
+.hosts-right {
+  min-width:0;
+}
+
+.hosts-handnames {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:8px 17% 0 23%;
+  min-height:42px;
+
+  opacity:0;
+  transform:translateY(-5px);
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+.hosts-handname {
+  color:#ff5b16;
+
+  font-family:'DK Lemon Yellow Sun', cursive;
+  font-size:30px;
+  font-weight:400;
+  line-height:1;
+
+  pointer-events:none;
+}
+
+.hosts-handname-noe {
+  transform:rotate(-4deg);
+}
+
+.hosts-handname-paco {
+  transform:rotate(3deg);
+}
+
+.hosts-right:hover .hosts-handnames {
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* Desactiva definitivamente los nombres antiguos */
+.host-name {
+  display:none !important;
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-handnames {
+    opacity:1;
+    transform:none;
+    padding:7px 14% 0 20%;
+    min-height:38px;
+  }
+
+  .hosts-handname {
+    font-size:25px;
+  }
+}
   </style>
           
 </head>
@@ -2519,13 +2587,32 @@ font-family:inherit;
 
   <img
     src="images/lifestyle/anfitriones.png"
-    alt="Paco y Noe, anfitriones de Marevostrum"
-  >
+    <div class="hosts-right">
+
+  <div class="hosts-visual">
+
+    <div class="hosts-blue"></div>
+    <div class="hosts-sun"></div>
+
+    <div class="hosts-rays">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <img
+      src="images/lifestyle/anfitriones.png"
+      alt="Paco y Noe, anfitriones de Marevostrum"
+    >
+
+  </div>
+
+  <div class="hosts-handnames">
+    <span class="hosts-handname hosts-handname-noe">Noe</span>
+    <span class="hosts-handname hosts-handname-paco">Paco</span>
+  </div>
 
 </div>
-
-<span class="host-name host-name-noe">Noe</span>
-<span class="host-name host-name-paco">Paco</span>
             <div class="hosts-places" id="sitios-marevostrum">
 
   <div class="hosts-places-heading">
