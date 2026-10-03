@@ -2154,6 +2154,141 @@ font-family:inherit;
     padding:0 12% 0 16%;
   }
 }
+            /* ========================================
+   ANFITRIONES - AJUSTE DEFINITIVO
+======================================== */
+
+/* Recupera exactamente la composición original */
+.hosts-visual {
+  position:relative !important;
+  align-self:stretch !important;
+  min-height:560px !important;
+  height:auto !important;
+  overflow:hidden !important;
+  padding:0 !important;
+}
+
+/* Foto */
+.hosts-visual img {
+  position:absolute !important;
+  width:92% !important;
+  max-width:850px !important;
+  height:auto !important;
+
+  right:-2% !important;
+  bottom:-5px !important;
+
+  display:block !important;
+  z-index:3 !important;
+
+  filter:grayscale(100%) !important;
+
+  transition:
+    transform .65s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Movimiento muy ligero al pasar */
+.hosts-visual:hover img {
+  transform:scale(1.025) !important;
+}
+
+
+/* NOMBRES: sobre la zona crema del recorte inferior */
+
+.host-name {
+  position:absolute !important;
+  z-index:8 !important;
+
+  padding:0 !important;
+  margin:0 !important;
+
+  background:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+
+  color:#ff5b16 !important;
+
+  font-family:'DK Lemon Yellow Sun', cursive !important;
+  font-size:30px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  letter-spacing:.3px !important;
+  text-transform:none !important;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+/* Noe */
+.host-name-noe {
+  left:29% !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:13px !important;
+
+  transform:translateY(7px) rotate(-4deg);
+}
+
+/* Paco */
+.host-name-paco {
+  right:17% !important;
+  left:auto !important;
+  top:auto !important;
+  bottom:11px !important;
+
+  transform:translateY(7px) rotate(3deg);
+}
+
+/* Aparecen suavemente */
+.hosts-visual:hover .host-name-noe {
+  opacity:1;
+  transform:translateY(0) rotate(-4deg);
+}
+
+.hosts-visual:hover .host-name-paco {
+  opacity:1;
+  transform:translateY(0) rotate(3deg);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-visual {
+    width:100% !important;
+    min-height:380px !important;
+    height:auto !important;
+  }
+
+  .hosts-visual img {
+    width:105% !important;
+    max-width:none !important;
+    right:-12% !important;
+    bottom:-5px !important;
+  }
+
+  .host-name {
+    opacity:1 !important;
+    font-size:25px !important;
+  }
+
+  .host-name-noe {
+    left:20% !important;
+    bottom:10px !important;
+    transform:rotate(-4deg);
+  }
+
+  .host-name-paco {
+    right:12% !important;
+    bottom:9px !important;
+    transform:rotate(3deg);
+  }
+}
   </style>
           
 </head>
@@ -2295,30 +2430,26 @@ font-family:inherit;
 </button>
 
     </div>
-<div class="hosts-visual-wrap">
-    <div class="hosts-visual">
+<div class="hosts-visual">
 
-      <div class="hosts-blue"></div>
-      <div class="hosts-sun"></div>
+  <div class="hosts-blue"></div>
+  <div class="hosts-sun"></div>
 
-      <div class="hosts-rays">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-<div class="hosts-signatures">
-  <span class="hosts-signature hosts-signature-noe">Noe</span>
-  <span class="hosts-signature hosts-signature-paco">Paco</span>
+  <div class="hosts-rays">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <img
+    src="images/lifestyle/anfitriones.png"
+    alt="Paco y Noe, anfitriones de Marevostrum"
+  >
+
+  <span class="host-name host-name-noe">Noe</span>
+  <span class="host-name host-name-paco">Paco</span>
+
 </div>
-
-</div>
-      <img
-        src="images/lifestyle/anfitriones.png"
-        alt="Anfitriones de Marevostrum"
-      >
-
-    </div>
-            </div>
             <div class="hosts-places" id="sitios-marevostrum">
 
   <div class="hosts-places-heading">
