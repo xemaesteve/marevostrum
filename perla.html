@@ -832,6 +832,168 @@ html {
     margin-bottom:22px !important;
   }
 }
+    /* =========================
+   MAPA DE SITUACIÓN
+========================= */
+
+.location-section {
+  max-width:1200px;
+  margin:0 auto;
+  padding:90px 7%;
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:60px;
+  align-items:center;
+}
+
+.location-copy {
+  max-width:430px;
+}
+
+.location-kicker {
+  display:block;
+  margin-bottom:14px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.location-copy h2 {
+  margin:0 0 22px;
+  color:#243B7A;
+  font-size:42px;
+  line-height:1.08;
+  font-weight:300;
+}
+
+.location-copy p {
+  margin:0 0 24px;
+  color:#243B7A;
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+.location-link {
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.location-link:hover {
+  text-decoration:underline;
+}
+
+
+/* MAPA */
+
+.location-map {
+  position:relative;
+  overflow:hidden;
+}
+
+.location-map img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .location-section {
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:65px 6%;
+  }
+
+  .location-copy {
+    max-width:none;
+  }
+
+  .location-copy h2 {
+    font-size:34px;
+  }
+}
+    /* PIN DEL APARTAMENTO */
+
+.location-pin {
+  position:absolute;
+
+  width:26px;
+  height:26px;
+
+  background:#ff5b16;
+
+  border:4px solid white;
+  border-radius:50%;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.22);
+
+  z-index:5;
+
+  transform:translate(-50%, -50%);
+
+  animation:mapPin 2s ease-in-out infinite;
+}
+
+/* halo */
+.location-pin::after {
+  content:"";
+
+  position:absolute;
+  left:50%;
+  top:50%;
+
+  width:38px;
+  height:38px;
+
+  border:2px solid #ff5b16;
+  border-radius:50%;
+
+  transform:translate(-50%, -50%);
+
+  opacity:.45;
+
+  animation:mapPulse 2s ease-out infinite;
+}
+
+@keyframes mapPin {
+  0%, 100% {
+    transform:translate(-50%, -50%) translateY(0);
+  }
+
+  50% {
+    transform:translate(-50%, -50%) translateY(-6px);
+  }
+}
+
+@keyframes mapPulse {
+  0% {
+    transform:translate(-50%, -50%) scale(.7);
+    opacity:.5;
+  }
+
+  100% {
+    transform:translate(-50%, -50%) scale(1.5);
+    opacity:0;
+  }
+}
+
+
+/* POSICIÓN PERLA */
+
+.location-pin-perla {
+  left:73%;
+  top:54%;
+}
   </style>
 </head>
 
@@ -1002,7 +1164,38 @@ html {
     <h3>Playa, monte y bici</h3>
     <p>Una base tranquila para moverse entre mar, rutas y naturaleza.</p>
   </div>
+<section class="location-section">
 
+  <div class="location-copy">
+    <span class="location-kicker">Dónde estamos</span>
+
+    <h2>Peñíscola delante. Calma alrededor.</h2>
+
+    <p>
+      Perla está en una zona tranquila, con acceso cómodo al pueblo,
+      la playa y las salidas hacia la montaña.
+    </p>
+
+    <a
+      class="location-link"
+      href="https://www.google.com/maps/search/?api=1&query=Avenida+Bulgaria+26+Peñiscola"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Abrir en Google Maps ↗
+    </a>
+  </div>
+
+  <div class="location-map">
+    <img
+      src="images/mapa-peniscola.png"
+      alt="Mapa de situación de Marevostrum Perla en Peñíscola"
+    >
+
+    <span class="location-pin location-pin-perla" aria-hidden="true"></span>
+  </div>
+
+</section>
 </section>
 
 <section class="perla-cta" id="reserva">
