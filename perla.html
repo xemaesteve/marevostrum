@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apartamento Perla | Vistas al mar en Peñíscola | Marevostrum</title>
-  <meta name="description" content="Apartamento Perla en Peñíscola: vistas al mar, calma, aparcamiento fácil, piscina comunitaria y espacio cómodo para hasta 5 huéspedes.">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>Apartamento Perla | Marevostrum Estancias</title>
+
   <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
 
   <style>
@@ -14,7 +13,7 @@
     body {
       font-family:'Gotham SSm', sans-serif;
       background:#f7f4ee;
-      color:#243B7A
+      color:#243B7A;
     }
 
     header {
@@ -337,11 +336,6 @@
       color:white;
       text-align:center;
     }
-    .cta-logo {
-  width:170px;
-  filter:brightness(0) invert(1);
-  margin-bottom:28px;
-}
 
     .perla-cta span {
       display:block;
@@ -486,10 +480,7 @@
       .feature h3 {
         font-size:20px;
       }
-.cta-logo {
-  width:150px;
-  margin-bottom:24px;
-}
+
       .perla-cta {
         padding:70px 6%;
       }
@@ -502,503 +493,111 @@
         margin-bottom:12px;
       }
     }
-    /* BLOQUE FINAL RESERVA PERLA */
-.booking-wrap {
-  margin-top:0;
-}
+  
+    /* RESERVA: DESPLEGABLE DE CANALES */
+    .booking-menu {
+      position:relative;
+      display:inline-block;
+      margin:0 6px 12px 0;
+      vertical-align:top;
+      text-align:left;
+      z-index:20;
+    }
 
-.booking-brand {
-  background:#ffffff;
-  padding:42px 7% 26px;
-  text-align:center;
-}
+    .booking-menu summary {
+      list-style:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      background:#ff5b16;
+      color:white;
+      padding:18px 30px;
+      text-transform:uppercase;
+      font-weight:bold;
+      letter-spacing:1.5px;
+      font-size:13px;
+      user-select:none;
+    }
 
-.booking-logo {
-  width:170px;
-  height:auto;
-  display:inline-block;
-}
+    .booking-menu summary::-webkit-details-marker {
+      display:none;
+    }
 
-.booking-cta {
-  background:#243B7A;
-  color:white;
-  padding:40px 7% 60px;
-  text-align:center;
-}
+    .booking-menu summary::after {
+      content:"▾";
+      font-size:11px;
+      transition:transform .2s ease;
+    }
 
-.booking-kicker {
-  display:block;
-  color:#ff5b16;
-  text-transform:uppercase;
-  font-size:13px;
-  letter-spacing:2px;
-  font-weight:600;
-  margin-bottom:20px;
-}
+    .booking-menu[open] summary::after {
+      transform:rotate(180deg);
+    }
 
-.booking-cta h2 {
-  font-size:56px;
-  line-height:1.08;
-  font-weight:300;
-  max-width:780px;
-  margin:0 auto 24px;
-}
+    .booking-options {
+      position:absolute;
+      left:0;
+      top:calc(100% + 8px);
+      min-width:245px;
+      background:white;
+      box-shadow:0 12px 32px rgba(0,0,0,.18);
+      border-radius:2px;
+      overflow:hidden;
+      z-index:50;
+    }
 
-.booking-cta p {
-  font-size:18px;
-  line-height:1.8;
-  font-weight:300;
-  max-width:720px;
-  margin:0 auto 36px;
-}
+    .booking-options a {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:15px 18px;
+      color:#243B7A;
+      background:white;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.8px;
+      border-bottom:1px solid rgba(36,59,122,.10);
+      transition:background .2s ease, color .2s ease;
+    }
 
-.booking-buttons {
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
+    .booking-options a:last-child {
+      border-bottom:0;
+    }
 
-.booking-cta .btn {
-  display:inline-block;
-  background:#ff5b16;
-  color:white;
-  padding:16px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  text-transform:uppercase;
-  font-size:12px;
-  letter-spacing:1.5px;
-  font-weight:600;
-}
+    .booking-options a:hover {
+      background:#f7f4ee;
+      color:#ff5b16;
+    }
 
-.booking-cta .btn-secondary {
-  background:transparent;
-  border:1px solid rgba(255,255,255,.75);
-}
+    .booking-options a::after {
+      content:"↗";
+      color:#ff5b16;
+      font-size:14px;
+    }
+
     @media(max-width:800px) {
-  .booking-brand {
-    padding:34px 6% 20px;
-  }
+      .booking-menu {
+        display:block;
+        width:100%;
+        max-width:330px;
+        margin:0 auto 12px;
+      }
+
+      .booking-menu summary {
+        width:100%;
+      }
+
+      .booking-options {
+        position:static;
+        width:100%;
+        min-width:0;
+        margin-top:8px;
+      }
+    }
 
-  .booking-logo {
-    width:135px;
-  }
-
-  .booking-cta {
-    padding:34px 6% 46px;
-  }
-
-  .booking-cta h2 {
-    font-size:36px;
-  }
-
-  .booking-cta p {
-    font-size:16px;
-  }
-
-  .booking-buttons {
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .booking-buttons .btn {
-    width:100%;
-    max-width:320px;
-    text-align:center;
-  }
-}
-    /* AJUSTE FINAL MÓVIL PERLA */
-html {
-  -webkit-text-size-adjust:100%;
-  text-size-adjust:100%;
-}
-
-@media(max-width:800px) {
-
-  body {
-    overflow-x:hidden;
-  }
-
-  header {
-    padding:28px 6% !important;
-    align-items:flex-start !important;
-  }
-
-  .logo {
-    width:190px !important;
-  }
-
-  header nav {
-    display:none !important;
-  }
-
-  .hero-perla {
-    min-height:92vh !important;
-    padding:150px 6% 60px !important;
-    background-position:center center !important;
-  }
-
-  .label {
-    font-size:11px !important;
-    letter-spacing:2px !important;
-    margin-bottom:16px !important;
-  }
-
-  h1 {
-    font-size:38px !important;
-    line-height:1.02 !important;
-    letter-spacing:1px !important;
-    margin-bottom:24px !important;
-  }
-
-  .hero-content p {
-    font-size:17px !important;
-    line-height:1.65 !important;
-    margin-bottom:28px !important;
-  }
-
-  .btn {
-    display:block !important;
-    width:100% !important;
-    max-width:320px !important;
-    text-align:center !important;
-    margin:0 0 14px 0 !important;
-    padding:15px 20px !important;
-    font-size:11px !important;
-  }
-
-  .quick-info {
-    padding:34px 6% !important;
-  }
-
-  .info-grid {
-    grid-template-columns:1fr 1fr !important;
-    gap:12px !important;
-  }
-
-  .info-item {
-    padding:18px 16px !important;
-  }
-
-  .info-item strong {
-    font-size:26px !important;
-  }
-
-  .info-item span {
-    font-size:10px !important;
-    letter-spacing:1.2px !important;
-  }
-
-  .gallery-header h2,
-  .intro-perla h2,
-  .details-header h2,
-  .perla-cta h2 {
-    font-size:30px !important;
-    line-height:1.15 !important;
-    letter-spacing:0 !important;
-  }
-
-  .perla-details {
-    padding:58px 6% !important;
-  }
-
-  .details-header {
-    margin-bottom:32px !important;
-  }
-
-  .details-header span {
-    font-size:11px !important;
-    letter-spacing:2px !important;
-  }
-
-  .distribution {
-    grid-template-columns:1fr !important;
-    gap:18px !important;
-  }
-
-  .distribution div {
-    padding:24px !important;
-  }
-
-  .distribution h3 {
-    font-size:20px !important;
-    line-height:1.05 !important;
-    letter-spacing:1.4px !important;
-    margin-bottom:14px !important;
-  }
-
-  .distribution p {
-    font-size:15px !important;
-    line-height:1.6 !important;
-  }
-
-  .services {
-    grid-template-columns:1fr !important;
-    padding:24px !important;
-    gap:16px !important;
-  }
-
-  .services span {
-    font-size:15px !important;
-    line-height:1.5 !important;
-  }
-
-  .perla-features {
-    grid-template-columns:1fr !important;
-    padding:58px 6% !important;
-  }
-
-  .feature h3 {
-    font-size:20px !important;
-    line-height:1.15 !important;
-  }
-}
-    .hero-claim {
-  font-size:28px !important;
-  line-height:1.25 !important;
-  font-weight:300 !important;
-  max-width:620px !important;
-  margin-bottom:24px !important;
-}
-    @media(max-width:800px) {
-  .hero-claim {
-    font-size:22px !important;
-    line-height:1.3 !important;
-    margin-bottom:22px !important;
-  }
-}
-    /* HERO PERLA - JERARQUÍA DE NOMBRE */
-.hero-brand {
-  display:block;
-  color:#ff5b16;
-  font-size:14px;
-  letter-spacing:2px;
-  font-weight:600;
-  margin-bottom:18px;
-}
-
-.hero-type {
-  display:block;
-  color:white;
-  font-size:13px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-weight:500;
-  margin-bottom:10px;
-}
-
-.hero-perla h1 {
-  font-size:96px;
-  line-height:.9;
-  letter-spacing:.5px;
-  text-transform:none;
-  font-weight:700;
-  margin-bottom:24px;
-}
-
-.hero-claim {
-  font-size:28px !important;
-  line-height:1.25 !important;
-  font-weight:300 !important;
-  max-width:620px !important;
-  margin-bottom:24px !important;
-}
-    @media(max-width:800px) {
-  .hero-brand {
-    font-size:13px !important;
-    letter-spacing:1.8px !important;
-    margin-bottom:16px !important;
-  }
-
-  .hero-type {
-    font-size:11px !important;
-    letter-spacing:2.5px !important;
-    margin-bottom:8px !important;
-  }
-
-  .hero-perla h1 {
-    font-size:62px !important;
-    line-height:.9 !important;
-    letter-spacing:.3px !important;
-    text-transform:none !important;
-    font-weight:700 !important;
-    margin-bottom:20px !important;
-  }
-
-  .hero-claim {
-    font-size:22px !important;
-    line-height:1.3 !important;
-    margin-bottom:22px !important;
-  }
-}
-    /* =========================
-   MAPA DE SITUACIÓN
-========================= */
-
-.location-section {
-  max-width:1200px;
-  margin:0 auto;
-  padding:90px 7%;
-  display:grid;
-  grid-template-columns:.75fr 1.25fr;
-  gap:60px;
-  align-items:stretch;
-}
-
-.location-copy {
-  max-width:430px;
-}
-
-.location-kicker {
-  display:block;
-  margin-bottom:14px;
-  color:#ff5b16;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-.location-copy h2 {
-  margin:0 0 22px;
-  color:#243B7A;
-  font-size:42px;
-  line-height:1.08;
-  font-weight:300;
-}
-
-.location-copy p {
-  margin:0 0 24px;
-  color:#243B7A;
-  font-size:16px;
-  line-height:1.75;
-  font-weight:300;
-}
-
-.location-link {
-  color:#ff5b16;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  text-decoration:none;
-}
-
-.location-link:hover {
-  text-decoration:underline;
-}
-
-
-/* MAPA */
-
-.location-map {
-  position:relative;
-  overflow:hidden;
-  width:100%;
-  min-height:0;
-}
-
-.location-map img {
-  position:absolute;
-  inset:0;
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-
-/* MÓVIL */
-
-@media(max-width:800px) {
-
-  .location-section {
-    grid-template-columns:1fr;
-    gap:32px;
-    padding:65px 6%;
-  }
-
-  .location-copy {
-    max-width:none;
-  }
-
-  .location-copy h2 {
-    font-size:34px;
-  }
-}
-    /* PIN DEL APARTAMENTO */
-
-.location-pin {
-  position:absolute;
-
-  width:26px;
-  height:26px;
-
-  background:#ff5b16;
-
-  border:4px solid white;
-  border-radius:50%;
-
-  box-shadow:0 5px 15px rgba(0,0,0,.22);
-
-  z-index:5;
-
-  transform:translate(-50%, -50%);
-
-  animation:mapPin 2s ease-in-out infinite;
-}
-
-/* halo */
-.location-pin::after {
-  content:"";
-
-  position:absolute;
-  left:50%;
-  top:50%;
-
-  width:38px;
-  height:38px;
-
-  border:2px solid #ff5b16;
-  border-radius:50%;
-
-  transform:translate(-50%, -50%);
-
-  opacity:.45;
-
-  animation:mapPulse 2s ease-out infinite;
-}
-
-@keyframes mapPin {
-  0%, 100% {
-    transform:translate(-50%, -50%) translateY(0);
-  }
-
-  50% {
-    transform:translate(-50%, -50%) translateY(-6px);
-  }
-}
-
-@keyframes mapPulse {
-  0% {
-    transform:translate(-50%, -50%) scale(.7);
-    opacity:.5;
-  }
-
-  100% {
-    transform:translate(-50%, -50%) scale(1.5);
-    opacity:0;
-  }
-}
-
-
-/* POSICIÓN PERLA */
-
-.location-pin-perla {
-  left:18%;
-  top:49%;
-}
   </style>
 </head>
 
@@ -1013,28 +612,22 @@ html {
     <a href="index.html#apartamentos">Apartamentos</a>
     <a href="index.html#peniscola-marevostrum">Peñíscola</a>
     <a href="index.html#contacto">Contacto</a>
-   
+    <a class="whatsapp" href="#reserva">Disponibilidad</a>
   </nav>
 </header>
 
 <section class="hero-perla">
   <div class="hero-content">
-   <span class="hero-brand">Marevostrum</span>
+    <span class="label">Apartamento Perla</span>
 
-<span class="hero-type">Apartamento</span>
+    <h1>Peñíscola entera delante, silencio detrás.</h1>
 
-<h1>Perla</h1>
+    <p>
+      Vistas, calma y aparcamiento fácil. Un apartamento para mirar el mar,
+      teletrabajar con luz natural y volver a casa sin el ruido del centro.
+    </p>
 
-<p class="hero-claim">
-  Peñíscola entera delante, silencio detrás.
-</p>
-
-<p>
-  Vistas, calma y aparcamiento fácil. Un apartamento para mirar el mar,
-  teletrabajar con luz natural y volver a casa sin el ruido del centro.
-</p>
-
-   <a class="btn" href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Reservar en Airbnb</a>
+    <a class="btn" href="#reserva">Consultar disponibilidad</a>
     <a class="btn btn-secondary" href="index.html">Volver</a>
   </div>
 </section>
@@ -1169,39 +762,10 @@ html {
     <h3>Playa, monte y bici</h3>
     <p>Una base tranquila para moverse entre mar, rutas y naturaleza.</p>
   </div>
-  </section>
-<section class="location-section">
-
-  <div class="location-copy">
-    <span class="location-kicker">Dónde estamos</span>
-
-    <h2>Peñíscola delante. Calma alrededor.</h2>
-
-    <p>
-      Perla está en una zona tranquila, con acceso cómodo al pueblo,
-      la playa y las salidas hacia la montaña.
-    </p>
-
-    <a
-      class="location-link"
-      href="https://www.google.com/maps/search/?api=1&query=Avenida+Bulgaria+26+Peñiscola"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Abrir en Google Maps ↗
-    </a>
-  </div>
-<div class="location-map">
-<img src="/images/mapa-peniscola.png" alt="">
-    <span class="location-pin location-pin-perla" aria-hidden="true"></span>
-  </div>
 
 </section>
 
 <section class="perla-cta" id="reserva">
-
-  <img class="cta-logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
-
   <span>Reserva Perla</span>
 
   <h2>Un apartamento para mirar Peñíscola con calma.</h2>
@@ -1211,9 +775,15 @@ html {
     espacio cómodo y una terraza pensada para quedarse.
   </p>
 
- <a class="btn" href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Reservar en Airbnb</a>
+  <details class="booking-menu">
+    <summary>Reservar</summary>
+    <div class="booking-options">
+      <a href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Airbnb</a>
+      <a href="https://www.booking.com/hotel/es/marevostrum-perla-duplex-moderno-con-vistas.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+      <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
+    </div>
+  </details>
   <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
-
 </section>
 
 </body>

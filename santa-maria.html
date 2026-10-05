@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apartamento Santa María | Casco antiguo de Peñíscola | Marevostrum</title>
-  <meta name="description" content="Apartamento Santa María en Peñíscola: estancia para dos personas en el casco antiguo, cerca del mar, con balcón privado, cocina equipada y azotea con vistas.">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>Apartamento Santa María | Marevostrum Estancias</title>
+
   <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
 
   <style>
@@ -351,7 +350,7 @@
     }
 
     .cta-logo {
-      width:170px;
+      width:135px;
       filter:brightness(0) invert(1);
       margin-bottom:28px;
     }
@@ -570,162 +569,111 @@
         font-size:32px;
       }
     }
-    /* =========================
-   MAPA DE SITUACIÓN
-========================= */
+  
+    /* RESERVA: DESPLEGABLE DE CANALES */
+    .booking-menu {
+      position:relative;
+      display:inline-block;
+      margin:0 6px 12px 0;
+      vertical-align:top;
+      text-align:left;
+      z-index:20;
+    }
 
-.location-section {
-  max-width:1200px;
-  margin:0 auto;
-  padding:90px 7%;
-  display:grid;
-  grid-template-columns:.75fr 1.25fr;
-  gap:60px;
-  align-items:stretch;
-}
+    .booking-menu summary {
+      list-style:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      background:#ff5b16;
+      color:white;
+      padding:18px 30px;
+      text-transform:uppercase;
+      font-weight:bold;
+      letter-spacing:1.5px;
+      font-size:13px;
+      user-select:none;
+    }
 
-.location-copy {
-  max-width:430px;
-}
+    .booking-menu summary::-webkit-details-marker {
+      display:none;
+    }
 
-.location-kicker {
-  display:block;
-  margin-bottom:14px;
-  color:#ff5b16;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
+    .booking-menu summary::after {
+      content:"▾";
+      font-size:11px;
+      transition:transform .2s ease;
+    }
 
-.location-copy h2 {
-  margin:0 0 22px;
-  color:#243B7A;
-  font-size:42px;
-  line-height:1.08;
-  font-weight:300;
-}
+    .booking-menu[open] summary::after {
+      transform:rotate(180deg);
+    }
 
-.location-copy p {
-  margin:0 0 24px;
-  color:#243B7A;
-  font-size:16px;
-  line-height:1.75;
-  font-weight:300;
-}
+    .booking-options {
+      position:absolute;
+      left:0;
+      top:calc(100% + 8px);
+      min-width:245px;
+      background:white;
+      box-shadow:0 12px 32px rgba(0,0,0,.18);
+      border-radius:2px;
+      overflow:hidden;
+      z-index:50;
+    }
 
-.location-link {
-  color:#ff5b16;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  text-decoration:none;
-}
+    .booking-options a {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:15px 18px;
+      color:#243B7A;
+      background:white;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.8px;
+      border-bottom:1px solid rgba(36,59,122,.10);
+      transition:background .2s ease, color .2s ease;
+    }
 
-.location-link:hover {
-  text-decoration:underline;
-}
+    .booking-options a:last-child {
+      border-bottom:0;
+    }
 
-.location-map {
-  position:relative;
-  overflow:hidden;
-  width:100%;
-  min-height:0;
-}
+    .booking-options a:hover {
+      background:#f7f4ee;
+      color:#ff5b16;
+    }
 
-.location-map img {
-  position:absolute;
-  inset:0;
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+    .booking-options a::after {
+      content:"↗";
+      color:#ff5b16;
+      font-size:14px;
+    }
 
+    @media(max-width:800px) {
+      .booking-menu {
+        display:block;
+        width:100%;
+        max-width:330px;
+        margin:0 auto 12px;
+      }
 
-/* PIN */
+      .booking-menu summary {
+        width:100%;
+      }
 
-.location-pin {
-  position:absolute;
-  width:26px;
-  height:26px;
-  background:#ff5b16;
-  border:4px solid white;
-  border-radius:50%;
-  box-shadow:0 5px 15px rgba(0,0,0,.22);
-  z-index:5;
-  transform:translate(-50%, -50%);
-  animation:mapPin 2s ease-in-out infinite;
-}
+      .booking-options {
+        position:static;
+        width:100%;
+        min-width:0;
+        margin-top:8px;
+      }
+    }
 
-.location-pin::after {
-  content:"";
-  position:absolute;
-  left:60%;
-  top:50%;
-  width:38px;
-  height:38px;
-  border:2px solid #ff5b16;
-  border-radius:50%;
-  transform:translate(-50%, -50%);
-  opacity:.45;
-  animation:mapPulse 2s ease-out infinite;
-}
-
-@keyframes mapPin {
-  0%, 100% {
-    transform:translate(-50%, -50%) translateY(0);
-  }
-
-  50% {
-    transform:translate(-50%, -50%) translateY(-6px);
-  }
-}
-
-@keyframes mapPulse {
-  0% {
-    transform:translate(-50%, -50%) scale(.7);
-    opacity:.5;
-  }
-
-  100% {
-    transform:translate(-50%, -50%) scale(1.5);
-    opacity:0;
-  }
-}
-
-
-/* POSICIÓN SANTA MARÍA */
-
-.location-pin-santa {
-  left:76%;
-  top:63%;
-}
-
-
-/* MÓVIL */
-
-@media(max-width:800px) {
-
-  .location-section {
-    grid-template-columns:1fr;
-    gap:32px;
-    padding:65px 6%;
-  }
-
-  .location-copy {
-    max-width:none;
-  }
-
-  .location-copy h2 {
-    font-size:34px;
-  }
-
-  .location-map {
-    min-height:300px;
-  }
-}
   </style>
 </head>
 
@@ -740,7 +688,7 @@
     <a href="index.html#apartamentos">Apartamentos</a>
     <a href="index.html#peniscola-marevostrum">Peñíscola</a>
     <a href="index.html#contacto">Contacto</a>
-   
+    <a class="whatsapp" href="#reserva">Disponibilidad</a>
   </nav>
 </header>
 
@@ -761,7 +709,7 @@
       para vivir el centro caminando, con el mar y los restaurantes muy cerca.
     </p>
 
-   <a class="btn" href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Reservar en Airbnb</a>
+    <a class="btn" href="#reserva">Consultar disponibilidad</a>
     <a class="btn btn-secondary" href="index.html">Volver</a>
   </div>
 </section>
@@ -804,17 +752,15 @@
     <h2>Una estancia cómoda para vivir Peñíscola desde el casco antiguo.</h2>
   </div>
 
- <div class="gallery-grid">
-  <img src="images/apartamentos/santa maria/salon-cocina-balcon-santa-maria.jpg" alt="Salón, cocina y balcón del Apartamento Santa María">
+  <div class="gallery-grid">
+    <img src="images/apartamentos/santa maria/santa-maria-1.jpg" alt="Apartamento Santa María">
 
-  <img src="images/apartamentos/santa maria/cocina-santa-maria.jpg" alt="Cocina y balcón del Apartamento Santa María">
+    <img src="images/apartamentos/santa maria/santa-maria-2.jpg" alt="Salón del Apartamento Santa María">
 
-  <img src="images/apartamentos/santa maria/habitacion-santa-maria.jpg" alt="Dormitorio del Apartamento Santa María">
+    <img src="images/apartamentos/santa maria/santa-maria-3.jpg" alt="Dormitorio del Apartamento Santa María">
 
-  <img src="images/apartamentos/santa maria/bano-santa-maria.jpg" alt="Baño y zona de armario del Apartamento Santa María">
-
-  <img src="images/apartamentos/santa maria/plaza-vistas-santa-maria.jpg" alt="Entorno del casco antiguo junto al Apartamento Santa María">
-</div>
+    <img src="images/apartamentos/santa maria/santa-maria-4.jpg" alt="Balcón o vistas del Apartamento Santa María">
+  </div>
 
 </section>
 
@@ -902,36 +848,6 @@
     <h3>Azotea con vistas</h3>
     <p>Un espacio para desconectar al final del día.</p>
   </div>
-  </section>
-<section class="location-section">
-
-  <div class="location-copy">
-    <span class="location-kicker">Dónde estamos</span>
-
-    <h2>En pleno casco antiguo.</h2>
-
-    <p>
-      Sal de casa y Peñíscola empieza en la puerta:
-      el mar, las calles del casco antiguo y todo a pocos pasos.
-    </p>
-
-    <a
-      class="location-link"
-      href="https://www.google.com/maps/search/?api=1&query=Calle+Gonzalez+Granda+14+Peñiscola"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Abrir en Google Maps ↗
-    </a>
-  </div>
-
-  <div class="location-map">
-
-    <img src="/images/mapa-peniscola.png" alt="">
-
-    <span class="location-pin location-pin-santa" aria-hidden="true"></span>
-
-  </div>
 
 </section>
 
@@ -948,7 +864,14 @@
     y de la vida diaria de Peñíscola.
   </p>
 
-  <a class="btn" href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Reservar en Airbnb</a>
+  <details class="booking-menu">
+    <summary>Reservar</summary>
+    <div class="booking-options">
+      <a href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Airbnb</a>
+      <a href="https://www.booking.com/hotel/es/santa-maria-casco-antiguo.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+      <a href="https://booking.bluemoonlightgroup.com/alquiler/apartamento-peniscola-santa-maria-marevostrum-751394.html" target="_blank" rel="noopener noreferrer">Reserva directa</a>
+    </div>
+  </details>
   <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
 
 </section>
