@@ -9,7 +9,77 @@
  <meta name="description" content="Apartamentos Marevostrum en Peñíscola: estancias mediterráneas con personalidad, cerca del mar, el casco antiguo y los rincones más auténticos de la ciudad.">         
   <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dk-lemon-yellow-sun" rel="stylesheet">
-  <style>
+  
+          /* SELECTOR DE IDIOMA */
+
+.lang-menu {
+  position:relative;
+  display:inline-block;
+  margin-left:8px;
+}
+
+.lang-menu summary {
+  list-style:none;
+  cursor:pointer;
+
+  background:#ff5b16;
+  color:white;
+
+  padding:9px 13px;
+
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+
+  border-radius:2px;
+}
+
+.lang-menu summary::-webkit-details-marker {
+  display:none;
+}
+
+.lang-menu summary::after {
+  content:" ▾";
+  font-size:9px;
+}
+
+.lang-menu[open] summary::after {
+  content:" ▴";
+}
+
+.lang-options {
+  position:absolute;
+  right:0;
+  top:calc(100% + 6px);
+
+  min-width:70px;
+
+  background:white;
+
+  box-shadow:0 8px 22px rgba(0,0,0,.15);
+
+  z-index:100;
+}
+
+.lang-options a {
+  display:block;
+
+  padding:10px 14px;
+
+  color:#243B7A !important;
+
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+
+  text-decoration:none;
+}
+
+.lang-options a:hover {
+  background:#f7f4ee;
+  color:#ff5b16 !important;
+}
+          <style>
     * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
@@ -2306,6 +2376,14 @@ font-family:inherit;
    <a href="#apartamentos">Apartamentos</a>
 <a href="#anfitriones">Anfitriones</a>
 <a href="#contacto">Contacto</a>
+            <details class="lang-menu">
+  <summary>ES</summary>
+
+  <div class="lang-options">
+    <a href="index-en.html">EN</a>
+    <a href="index-fr.html">FR</a>
+  </div>
+</details>
     
   </nav>
 </header>
