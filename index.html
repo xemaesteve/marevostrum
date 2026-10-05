@@ -1,1 +1,2660 @@
+          <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marevostrum Estancias | Apartamentos en Peñíscola</title>
+          <meta name="description" content="Apartamentos Marevostrum en Peñíscola: estancias mediterráneas con personalidad, cerca del mar, el casco antiguo y los rincones más auténticos de la ciudad.">
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <meta name="description" content="Apartamentos Marevostrum en Peñíscola: estancias mediterráneas con personalidad, cerca del mar, el casco antiguo y los rincones más auténticos de la ciudad.">         
+  <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dk-lemon-yellow-sun" rel="stylesheet">
+  
+          <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
 
+    body {
+      font-family: 'Gotham SSm', sans-serif;
+      background:#f7f4ee;
+      color:#243B7A;
+    }
+
+   header {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:38px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  z-index:10;
+}
+
+    .logo {
+  width:260px;
+  filter: brightness(0) invert(1);
+}
+  nav {
+  display:flex;
+  gap:34px;
+  align-items:center;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+  nav a {
+  color:white;
+  text-decoration:none;
+}
+
+   .whatsapp {
+  background:#ff5b16;
+  padding:14px 22px;
+  border-radius:28px;
+}
+    .hero {
+      min-height:92vh;
+      background:
+        linear-gradient(90deg, rgba(0,39,78,.82) 0%, rgba(0,39,78,.45) 42%, rgba(0,0,0,.12) 100%),
+        url("images/lifestyle/hero.jpg");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:140px 7% 80px;
+      color:white;
+    }
+
+    .hero h1 {
+      font-size:78px;
+      line-height:1.08;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      max-width:520px;
+      margin-bottom:28px;
+    }
+
+    .orange { color:#ff5b16; }
+
+    .hero p {
+      margin-bottom:35px;
+      font-size:18px;
+    }
+
+    .btn {
+      display:inline-block;
+      background:#ff5b16;
+      color:white;
+      padding:18px 30px;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-weight:bold;
+      letter-spacing:1.5px;
+      font-size:13px;
+    }
+
+    section {
+      padding:80px 7%;
+    }
+
+    .intro {
+      display:grid;
+      grid-template-columns:1fr 1fr 190px;
+      gap:28px;
+      align-items:center;
+      background:#fff;
+    }
+
+    .intro h2 {
+      font-size:42px;
+      line-height:1.35;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:42px;
+    }
+
+    .intro p {
+      color:#163b63;
+      line-height:1.8;
+    }
+
+    .intro img {
+      width:100%;
+      height:380px;
+      object-fit:cover;
+    }
+.orange-block {
+  height:380px;
+  background-image:url("images/lifestyle/higuera.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.item p{
+  font-size:12px;
+  line-height:1.5;
+  color:#243B7A;
+  font-weight:300;
+  letter-spacing:0.3px;
+}
+    .apartments-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      margin-bottom:34px;
+    }
+
+    .label {
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+
+    .apartments h2 {
+      font-size:40px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+    }
+
+    .see-all {
+      color:#243B7A;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-weight:bold;
+      letter-spacing:1px;
+    }
+
+    .cards {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:34px;
+    }
+
+    .card {
+      background:#fff;
+      box-shadow:0 8px 24px rgba(0,0,0,.12);
+      overflow:hidden;
+    }
+
+    .card img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+   .card:hover img {
+  transform:scale(1.04);
+}
+    .card-content {
+      padding:24px 28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+    }
+
+    .card h3 {
+      font-size:24px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }
+
+    .card span {
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .card-desc {
+  margin-top:12px;
+  font-size:14px;
+  line-height:1.5;
+  font-weight:300;
+  color:#243B7A;
+  max-width:320px;
+  letter-spacing:0;
+}        
+
+    .arrow {
+      color:#ff5b16;
+      font-size:34px;
+    }
+ .arrow {
+  margin-top:2px;
+} 
+ .card-cta {
+  color:#ff5b16;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:600;
+  white-space:nowrap;
+  margin-top:4px;
+}
+
+.card-cta:hover {
+  text-decoration:underline;
+}           
+.marevostrum-guide {
+  background:#fff;
+  padding:90px 7% 100px;
+  color:#243B7A;
+}
+
+.guide-header {
+  max-width:720px;
+  margin-bottom:46px;
+}
+
+.guide-kicker {
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:8px;
+  margin-bottom:18px;
+}
+
+.guide-kicker span {
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.guide-kicker img {
+  width:120px;
+  height:auto;
+  display:block;
+  margin-left:-4px;
+  transform:translateY(-4px);
+}
+
+.guide-header h2 {
+  font-size:42px;
+  line-height:1.1;
+  font-weight:300;
+  letter-spacing:1px;
+  margin-bottom:22px;
+}
+
+.guide-header p {
+  font-size:16px;
+  line-height:1.8;
+  font-weight:300;
+  max-width:560px;
+}
+
+.guide-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:34px;
+}
+
+.guide-card {
+  position:relative;
+  overflow:hidden;
+  background:#f7f4ee;
+  min-height:360px;
+}
+
+.guide-card img {
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+
+.guide-card:hover img {
+  transform:scale(1.04);
+}
+
+.guide-card-text {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:24px;
+  color:white;
+  background:linear-gradient(
+    0deg,
+    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.35) 55%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.guide-card-text h3 {
+  font-size:24px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.guide-card-text p {
+  font-size:13px;
+  line-height:1.5;
+  font-weight:300;
+  max-width:260px;
+  min-height:40px;
+}
+    footer {
+      background:#243B7A;
+      color:white;
+      padding:48px 7%;
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1.4fr 1fr;
+      gap:35px;
+      align-items:center;
+    }
+
+    footer img {
+      width:230px;
+      filter: brightness(0) invert(1);
+    }
+
+    footer p, footer a {
+      color:white;
+      text-decoration:none;
+      font-size:14px;
+      line-height:1.9;
+    }
+
+    .footer-orange {
+      color:#ff7a3c;
+      font-weight:bold;
+    }
+
+    @media(max-width:800px) {
+      header {
+        padding:26px 6%;
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav {
+        gap:16px;
+        flex-wrap:wrap;
+        font-size:11px;
+      }
+
+      .logo {
+        width:210px;
+      }
+
+      .hero {
+        min-height:88vh;
+        padding:160px 6% 70px;
+        background-position:center;
+      }
+
+      .hero h1 {
+        font-size:48px;
+      }
+
+      .intro {
+        grid-template-columns:1fr;
+      }
+
+      .orange-block {
+        height:120px;
+      }
+
+      .claim {
+        font-size:18px;
+        letter-spacing:4px;
+      }
+
+      .cards {
+        grid-template-columns:1fr;
+      }
+
+      footer {
+        grid-template-columns:1fr;
+      }
+    }
+            @media(max-width:800px) {
+  .marevostrum-guide {
+    padding:70px 6% 80px;
+  }
+
+  .guide-header h2 {
+    font-size:32px;
+  }
+
+  .guide-grid {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .guide-card,
+  .guide-card img {
+    height:320px;
+    min-height:320px;
+  }
+}
+.guide-kicker {
+  display:none;
+}
+
+.guide-header > span {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+.guide-card {
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.guide-card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(36,59,122,.58);
+  opacity:0;
+  transition:opacity .45s ease;
+  z-index:1;
+}
+
+.guide-card-text {
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:26px;
+  color:white;
+  background:none;
+  z-index:2;
+  opacity:0;
+  transform:translateY(18px);
+  transition:
+    opacity .45s ease,
+    transform .45s ease;
+}
+
+.guide-card:hover::before {
+  opacity:1;
+}
+
+.guide-card:hover .guide-card-text {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.guide-card-text h3 {
+  font-size:24px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.guide-card-text p {
+  font-size:13px;
+  line-height:1.5;
+  font-weight:300;
+  max-width:260px;
+}
+@media(max-width:800px) {
+  .guide-card::before {
+    opacity:.55;
+  }
+
+  .guide-card-text {
+    opacity:1;
+    transform:none;
+  }
+}
+.guide-card::before {
+  top:auto;
+  bottom:0;
+  height:38%;
+  background:linear-gradient(
+    0deg,
+    rgba(36,59,122,.78) 0%,
+    rgba(36,59,122,.62) 65%,
+    rgba(36,59,122,0) 100%
+  );
+}
+
+.guide-card-text {
+  bottom:0;
+  padding:22px 24px;
+}
+ /* AJUSTES MÓVIL MAREVOSTRUM */
+@media(max-width:800px) {
+
+  body {
+    overflow-x:hidden;
+  }
+
+  section {
+    padding:60px 6%;
+  }
+
+  .intro {
+    grid-template-columns:1fr;
+    gap:28px;
+    padding:60px 6%;
+  }
+
+  .intro h2 {
+    font-size:28px;
+    line-height:1.18;
+    letter-spacing:1.5px;
+    margin-bottom:0;
+  }
+
+  .intro img {
+    height:260px;
+  }
+
+  .orange-block {
+    height:160px;
+  }
+
+  .apartments {
+    padding:60px 6%;
+  }
+
+  .apartments-top {
+    display:block;
+    margin-bottom:28px;
+  }
+
+  .apartments h2 {
+    font-size:32px;
+    line-height:1;
+    letter-spacing:2px;
+  }
+
+  .see-all {
+    display:inline-block;
+    margin-top:18px;
+    font-size:11px;
+  }
+
+  .cards {
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .card img {
+    height:260px;
+  }
+
+  .card-content {
+    display:block;
+    padding:24px;
+  }
+
+  .card h3 {
+    font-size:24px;
+    line-height:1;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+  }
+
+  .card span {
+    display:block;
+    font-size:11px;
+    line-height:1.35;
+    letter-spacing:2px;
+  }
+
+  .card-desc {
+    font-size:15px;
+    line-height:1.55;
+    margin-top:16px;
+  }
+
+  .card-cta {
+    display:inline-block;
+    margin-top:18px;
+    font-size:11px;
+  }
+
+  .marevostrum-guide {
+    padding:70px 6% 80px;
+  }
+
+  .guide-header {
+    margin-bottom:36px;
+  }
+
+  .guide-header > span {
+    font-size:11px;
+    line-height:1.4;
+    letter-spacing:2px;
+  }
+
+  .guide-header h2 {
+    font-size:34px;
+    line-height:1.15;
+    letter-spacing:.5px;
+  }
+
+  .guide-header p {
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .guide-grid {
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .guide-card,
+  .guide-card img {
+    height:320px;
+    min-height:320px;
+  }
+
+  footer {
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+}           
+ .card-image-link {
+  display:block;
+  overflow:hidden;
+}
+            .card-title-link {
+  color:#243B7A;
+  text-decoration:none;
+}
+
+.card-title-link:hover {
+  color:#ff5b16;
+}
+
+
+.guide-grid-single .guide-card {
+  min-height:420px;
+}
+
+.guide-grid-single .guide-card img {
+  height:420px;
+}
+            @media(max-width:800px) {
+  .guide-grid-single {
+    grid-template-columns:1fr;
+  }
+
+  .guide-grid-single .guide-card,
+  .guide-grid-single .guide-card img {
+    height:320px;
+    min-height:320px;
+  }
+}
+            .food-feature {
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:42px;
+  align-items:stretch;
+  margin-top:46px;
+}
+
+.food-feature-text {
+  background:#f7f4ee;
+  padding:42px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+
+.food-feature-text h3 {
+  font-size:34px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.food-feature-text p {
+  font-size:16px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+.food-feature img {
+  width:100%;
+  height:460px;
+  object-fit:cover;
+  display:block;
+}
+            /* PEÑÍSCOLA SEGÚN MAREVOSTRUM - LIBRETA */
+.marevostrum-notebook {
+  background:#fff;
+  padding:95px 7%;
+  color:#243B7A;
+  overflow:hidden;
+}
+
+.notebook-layout {
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:58px;
+  align-items:center;
+}
+
+.notebook-copy {
+  position:relative;
+  background:#f7f4ee;
+  padding:54px 52px;
+  border-left:8px solid #ff5b16;
+}
+
+.notebook-kicker {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.notebook-copy h2 {
+  font-size:52px;
+  line-height:1.02;
+  font-weight:300;
+  letter-spacing:.5px;
+  margin-bottom:26px;
+}
+
+.notebook-copy p {
+  font-size:16px;
+  line-height:1.85;
+  font-weight:300;
+  max-width:560px;
+}
+
+.notebook-note {
+  display:inline-block;
+  margin-top:34px;
+  background:#ff5b16;
+  color:white;
+  padding:16px 22px;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:600;
+  letter-spacing:.5px;
+  transform:rotate(-1.5deg);
+}
+
+.notebook-image-wrap {
+  position:relative;
+  transform:rotate(1deg);
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+}
+
+.notebook-image-wrap img {
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  display:block;
+}
+
+.notebook-stamp {
+  position:absolute;
+  left:-22px;
+  top:28px;
+  background:#243B7A;
+  color:white;
+  padding:13px 18px;
+  text-transform:uppercase;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:600;
+  transform:rotate(-3deg);
+}
+            @media(max-width:800px) {
+  .marevostrum-notebook {
+    padding:70px 6%;
+  }
+
+  .notebook-layout {
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .notebook-copy {
+    padding:38px 30px;
+    border-left:6px solid #ff5b16;
+  }
+
+  .notebook-copy h2 {
+    font-size:36px;
+    line-height:1.08;
+  }
+
+  .notebook-copy p {
+    font-size:16px;
+    line-height:1.75;
+  }
+
+  .notebook-note {
+    font-size:13px;
+    transform:rotate(-1deg);
+  }
+
+  .notebook-image-wrap {
+    transform:none;
+  }
+
+  .notebook-image-wrap img {
+    height:330px;
+  }
+
+  .notebook-stamp {
+    left:18px;
+    top:18px;
+    transform:rotate(-2deg);
+  }
+}
+            /* AJUSTE FINAL PEÑÍSCOLA SEGÚN MAREVOSTRUM */
+.marevostrum-notebook {
+  padding:90px 7%;
+}
+
+.notebook-layout {
+  grid-template-columns:minmax(420px, .9fr) minmax(520px, 1.1fr);
+  gap:56px;
+  align-items:stretch;
+}
+
+.notebook-copy {
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.notebook-copy h2 {
+  font-size:clamp(42px, 4vw, 60px);
+  line-height:1.02;
+  max-width:680px;
+}
+
+.notebook-copy p {
+  max-width:640px;
+}
+
+.notebook-image-wrap {
+  height:100%;
+  min-height:500px;
+}
+
+.notebook-image-wrap img {
+  height:100%;
+  min-height:500px;
+  object-fit:cover;
+}
+            @media(max-width:1100px) {
+  .notebook-layout {
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .notebook-copy {
+    padding:46px 42px;
+  }
+
+  .notebook-copy h2 {
+    font-size:44px;
+    max-width:720px;
+  }
+
+  .notebook-image-wrap {
+    min-height:420px;
+  }
+
+  .notebook-image-wrap img {
+    min-height:420px;
+    height:420px;
+  }
+}
+            @media(max-width:800px) {
+  .marevostrum-notebook {
+    padding:70px 6%;
+  }
+
+  .notebook-copy {
+    padding:36px 30px;
+  }
+
+  .notebook-copy h2 {
+    font-size:36px;
+    line-height:1.08;
+  }
+
+  .notebook-copy p {
+    font-size:16px;
+    line-height:1.75;
+  }
+
+  .notebook-image-wrap,
+  .notebook-image-wrap img {
+    height:320px;
+    min-height:320px;
+  }
+}
+ /* RESET IMAGEN LIBRETA */
+.notebook-image-wrap {
+  position:relative !important;
+  overflow:visible !important;
+  transform:rotate(1deg) !important;
+  box-shadow:0 18px 38px rgba(0,0,0,.14) !important;
+}
+
+.notebook-photo-link {
+  display:block !important;
+  overflow:hidden !important;
+  border:0 !important;
+  outline:0 !important;
+  text-decoration:none !important;
+  color:inherit !important;
+}
+
+.notebook-photo-link:focus,
+.notebook-photo-link:active {
+  outline:0 !important;
+  border:0 !important;
+}
+
+.notebook-photo-link img {
+  width:100% !important;
+  height:500px !important;
+  object-fit:cover !important;
+  display:block !important;
+  border:0 !important;
+  outline:0 !important;
+  transition:transform .55s ease !important;
+}
+
+.notebook-photo-link:hover img {
+  transform:scale(1.04) !important;
+}
+
+.notebook-stamp {
+  position:absolute !important;
+  left:-22px !important;
+  top:28px !important;
+  background:#243B7A !important;
+  color:white !important;
+  padding:13px 18px !important;
+  text-transform:uppercase !important;
+  font-size:11px !important;
+  letter-spacing:2px !important;
+  font-weight:600 !important;
+  transform:rotate(-3deg) !important;
+  z-index:5 !important;
+  pointer-events:none !important;
+}
+@media(max-width:800px) {
+  .notebook-image-wrap {
+    transform:none !important;
+  }
+
+  .notebook-photo-link img {
+    height:320px !important;
+  }
+
+  .notebook-stamp {
+    left:18px !important;
+    top:18px !important;
+    transform:rotate(-2deg) !important;
+  }
+}
+            /* CORRECCIÓN MARCO IMAGEN LIBRETA */
+.notebook-image-wrap {
+  position:relative !important;
+  overflow:visible !important;
+  transform:rotate(1deg) !important;
+  box-shadow:none !important;
+  background:transparent !important;
+  min-height:0 !important;
+  height:auto !important;
+  line-height:0 !important;
+}
+
+.notebook-photo-link {
+  display:block !important;
+  overflow:hidden !important;
+  height:500px !important;
+  box-shadow:0 18px 38px rgba(0,0,0,.14) !important;
+  background:transparent !important;
+  border:0 !important;
+  outline:0 !important;
+  text-decoration:none !important;
+  line-height:0 !important;
+}
+
+.notebook-photo-link img {
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  object-fit:cover !important;
+  display:block !important;
+  vertical-align:bottom !important;
+  border:0 !important;
+  outline:0 !important;
+  transition:transform .55s ease !important;
+}
+
+.notebook-photo-link:hover img {
+  transform:scale(1.04) !important;
+}
+            @media(max-width:800px) {
+  .notebook-image-wrap {
+    transform:none !important;
+  }
+
+  .notebook-photo-link {
+    height:320px !important;
+  }
+}
+            footer a {
+  color:inherit;
+  text-decoration:none;
+}
+
+footer a:hover {
+  text-decoration:underline;
+}
+            /* BLOQUE PARA PROPIETARIOS */
+.owners-section {
+  padding:90px 7%;
+  background:#243B7A;
+  color:white;
+}
+
+.owners-copy {
+  max-width:760px;
+}
+
+.owners-copy > span {
+  display:block;
+  color:#ff5b16;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+.owners-copy h2 {
+  font-size:46px;
+  line-height:1.1;
+  font-weight:300;
+  margin-bottom:24px;
+}
+
+.owners-copy p {
+  font-size:17px;
+  line-height:1.8;
+  font-weight:300;
+  max-width:650px;
+  margin-bottom:32px;
+}
+
+.owners-cta {
+  display:inline-block;
+  background:#ff5b16;
+  color:white;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:1.5px;
+  font-weight:600;
+  padding:16px 26px;
+  border-radius:28px;
+}
+            @media(max-width:800px) {
+  .owners-section {
+    padding:65px 6%;
+  }
+
+  .owners-copy h2 {
+    font-size:34px;
+  }
+
+  .owners-copy p {
+    font-size:16px;
+  }
+}
+            /* ANFITRIONES */
+.hosts-section {
+  padding: 90px 7%;
+  background: #f7f4ee;
+}
+
+.hosts-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hosts-photo {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      #f7f4ee 0%,
+      #f7f4ee 38%,
+      #243B7A 38%,
+      #243B7A 100%
+    );
+}
+
+.hosts-photo img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.hosts-content {
+  max-width: 560px;
+}
+
+.hosts-kicker {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #ff5b16;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.hosts-content h2 {
+  margin: 0 0 28px;
+  color: #243B7A;
+  font-size: 52px;
+  line-height: 1.04;
+  font-weight: 300;
+}
+
+.hosts-intro {
+  margin-bottom: 18px;
+  color: #243B7A;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hosts-content p {
+  margin-bottom: 16px;
+  color: #243B7A;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+@media (max-width: 950px) {
+  .hosts-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hosts-photo {
+    min-height: 420px;
+  }
+
+  .hosts-photo img {
+    width: 78%;
+    max-width: 520px;
+  }
+
+  .hosts-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hosts-section {
+    padding: 65px 6%;
+  }
+
+  .hosts-photo {
+    min-height: 330px;
+  }
+
+  .hosts-photo img {
+    width: 96%;
+  }
+
+  .hosts-content h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .hosts-intro {
+    font-size: 17px;
+  }
+
+  .hosts-content p {
+    font-size: 15px;
+  }
+}
+/* =========================
+   ANFITRIONES
+========================= */
+
+.hosts-section {
+  background:#f7f4ee;
+  padding:0 4%;
+}
+
+.hosts-inner {
+  position:relative;
+  max-width:1380px;
+  min-height:560px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:0.8fr 1.35fr;
+  align-items:center;
+  overflow:hidden;
+  border-radius:22px;
+}
+
+/* TEXTO */
+
+.hosts-content {
+  position:relative;
+  z-index:10;
+  padding:70px 0 70px 45px;
+  max-width:470px;
+}
+
+.hosts-kicker {
+  display:block;
+  margin-bottom:14px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+}
+
+.hosts-content h2 {
+  margin:0 0 24px;
+  color:#243B7A;
+  font-size:54px;
+  line-height:.98;
+  font-weight:300;
+  letter-spacing:-1.5px;
+}
+
+.hosts-content h2 strong {
+  color:#ff5b16;
+  font-weight:300;
+}
+
+.hosts-content p {
+  max-width:420px;
+  margin:0 0 15px;
+  color:#243B7A;
+  font-size:15px;
+  line-height:1.65;
+  font-weight:300;
+}
+
+.hosts-button {
+          border:0;
+cursor:pointer;
+font-family:inherit;
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:15px;
+  padding:14px 23px;
+  background:#ff5b16;
+  color:#fff;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:transform .25s ease;
+}
+
+.hosts-button:hover {
+  transform:translateY(-2px);
+}
+
+.hosts-button span {
+  font-size:18px;
+}
+
+/* PARTE GRÁFICA */
+
+.hosts-visual {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 42px;
+}
+
+.hosts-blue {
+  position:absolute;
+  width:88%;
+  height:82%;
+  right:-3%;
+  top:1%;
+  background:#243B7A;
+  transform:rotate(-3deg);
+  clip-path:polygon(
+    2% 5%,
+    99% 0,
+    97% 93%,
+    91% 95%,
+    84% 93%,
+    76% 96%,
+    67% 94%,
+    57% 97%,
+    47% 94%,
+    37% 97%,
+    27% 94%,
+    17% 97%,
+    7% 94%
+  );
+  z-index:1;
+}
+
+.hosts-sun {
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:6%;
+  top:30%;
+  border-radius:50%;
+  background:#ff5b16;
+  z-index:2;
+}
+
+.hosts-visual img {
+  position:absolute;
+  width:92%;
+  max-width:850px;
+  right:-2%;
+  bottom:-5px;
+  display:block;
+  z-index:3;
+  filter:grayscale(100%);
+}
+
+/* PAPEL IRREGULAR INFERIOR */
+
+.hosts-visual::after {
+  content:"";
+  position:absolute;
+  left:3%;
+  right:-2%;
+  bottom:-2px;
+  height:68px;
+  background:#f7f4ee;
+  clip-path:polygon(
+    0 60%,
+    7% 38%,
+    15% 56%,
+    23% 32%,
+    32% 53%,
+    40% 30%,
+    48% 58%,
+    58% 35%,
+    68% 55%,
+    77% 33%,
+    86% 57%,
+    94% 37%,
+    100% 52%,
+    100% 100%,
+    0 100%
+  );
+  z-index:4;
+}
+
+/* RAYAS NARANJAS */
+
+.hosts-rays {
+  position:absolute;
+  left:6%;
+  top:29%;
+  width:55px;
+  height:70px;
+  z-index:5;
+}
+
+.hosts-rays span {
+  position:absolute;
+  width:33px;
+  height:4px;
+  background:#ff5b16;
+  border-radius:4px;
+}
+
+.hosts-rays span:nth-child(1) {
+  transform:rotate(55deg);
+  top:4px;
+  left:20px;
+}
+
+.hosts-rays span:nth-child(2) {
+  transform:rotate(30deg);
+  top:28px;
+  left:5px;
+}
+
+.hosts-rays span:nth-child(3) {
+  transform:rotate(10deg);
+  top:51px;
+  left:0;
+}
+
+/* TABLET */
+
+@media(max-width:1000px) {
+
+  .hosts-inner {
+    grid-template-columns:.9fr 1.1fr;
+    min-height:500px;
+  }
+
+  .hosts-content {
+    padding-left:30px;
+  }
+
+  .hosts-content h2 {
+    font-size:43px;
+  }
+
+  .hosts-visual {
+    min-height:500px;
+  }
+
+  .hosts-sun {
+    width:150px;
+    height:150px;
+  }
+}
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-section {
+    padding:0 5%;
+  }
+
+  .hosts-inner {
+    display:flex;
+    flex-direction:column;
+    border-radius:16px;
+  }
+
+  .hosts-content {
+    width:100%;
+    max-width:none;
+    padding:55px 25px 25px;
+  }
+
+  .hosts-content h2 {
+    font-size:40px;
+  }
+
+  .hosts-content p {
+    max-width:none;
+  }
+
+  .hosts-visual {
+    width:100%;
+    min-height:380px;
+  }
+
+  .hosts-blue {
+    width:95%;
+    right:-7%;
+  }
+
+  .hosts-sun {
+    width:125px;
+    height:125px;
+    right:3%;
+    top:25%;
+  }
+
+  .hosts-visual img {
+    width:105%;
+    max-width:none;
+    right:-12%;
+  }
+
+  .hosts-rays {
+    left:4%;
+    top:25%;
+  }
+}
+
+.hosts-photo img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.hosts-content {
+  max-width: 560px;
+}
+
+.hosts-kicker {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #ff5b16;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.hosts-content h2 {
+  margin: 0 0 28px;
+  color: #243B7A;
+  font-size: 52px;
+  line-height: 1.04;
+  font-weight: 300;
+}
+
+.hosts-intro {
+  margin-bottom: 18px;
+  color: #243B7A;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hosts-content p {
+  margin-bottom: 16px;
+  color: #243B7A;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+@media (max-width: 950px) {
+  .hosts-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hosts-photo {
+    min-height: 420px;
+  }
+
+  .hosts-photo img {
+    width: 78%;
+    max-width: 520px;
+  }
+
+  .hosts-content {
+    max-width: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .hosts-section {
+    padding: 65px 6%;
+  }
+
+  .hosts-photo {
+    min-height: 330px;
+  }
+
+  .hosts-photo img {
+    width: 96%;
+  }
+
+  .hosts-content h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .hosts-intro {
+    font-size: 17px;
+  }
+
+  .hosts-content p {
+    font-size: 15px;
+  }
+}
+            ...
+@media(max-width:800px) {
+   ...
+}
+
+
+/* SITIOS DE PACO Y NOE */
+
+.hosts-places {
+  position:relative;
+  z-index:10;
+  max-width:1280px;
+  margin:20px auto 0;
+  padding:75px 45px 85px;
+  border-top:1px solid rgba(36,59,122,.18);
+}
+
+.hosts-places-heading {
+  max-width:720px;
+  margin-bottom:48px;
+}
+
+.hosts-places-heading h3 {
+  margin:0 0 18px;
+  color:#243B7A;
+  font-size:44px;
+  line-height:1.05;
+  font-weight:300;
+  letter-spacing:-1px;
+}
+
+.hosts-places-heading p {
+  max-width:600px;
+  margin:0;
+  color:#243B7A;
+  font-size:16px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.hosts-places-grid {
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1px;
+  background:rgba(36,59,122,.16);
+  border:1px solid rgba(36,59,122,.16);
+}
+
+.host-place {
+  position:relative;
+  min-height:230px;
+  padding:38px;
+  background:#f7f4ee;
+}
+
+.host-place-number {
+  display:block;
+  margin-bottom:34px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+}
+
+.host-place h4 {
+  margin:0 0 14px;
+  color:#243B7A;
+  font-size:27px;
+  font-weight:400;
+}
+
+.host-place p {
+  max-width:460px;
+  margin:0;
+  color:#243B7A;
+  font-size:15px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.hosts-places-note {
+  margin:32px 0 0;
+  color:#ff5b16;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+@media(max-width:800px) {
+
+  .hosts-places {
+    padding:55px 25px 65px;
+  }
+
+  .hosts-places-heading h3 {
+    font-size:34px;
+  }
+
+  .hosts-places-grid {
+    grid-template-columns:1fr;
+  }
+
+  .host-place {
+    min-height:0;
+    padding:30px 25px;
+  }
+
+  .host-place-number {
+    margin-bottom:20px;
+  }
+}
+.host-place-map {
+  display:inline-block;
+  margin-top:18px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.1px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.host-place-map:hover {
+  text-decoration:underline;
+}
+            /* AJUSTES DE LEGIBILIDAD EN MÓVIL */
+@media(max-width:800px) {
+.hosts-button {
+  width:100%;
+  max-width:330px;
+}
+  .hosts-content h2 {
+    line-height:1.12;
+  }
+
+  .hosts-content p {
+    line-height:1.85;
+  }
+
+  .hosts-button {
+    white-space:normal;
+    line-height:1.35;
+    text-align:center;
+    justify-content:center;
+    padding:15px 20px;
+  }
+
+  .host-place h4 {
+    line-height:1.18;
+    margin-bottom:16px;
+  }
+
+  .host-place p {
+    line-height:1.8;
+  }
+
+  .host-place-map {
+    line-height:1.45;
+  }
+
+  .hosts-places-note {
+    line-height:1.55;
+    letter-spacing:1.4px;
+  }
+}
+            /* DESPLIEGUE ORGÁNICO DE LOS SITIOS */
+
+.hosts-places {
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  transform:translateY(-18px);
+
+  margin-top:0;
+  padding-top:0;
+  padding-bottom:0;
+
+  transition:
+    max-height .9s cubic-bezier(.22,1,.36,1),
+    opacity .45s ease,
+    transform .65s cubic-bezier(.22,1,.36,1),
+    margin-top .65s ease,
+    padding-top .65s ease,
+    padding-bottom .65s ease;
+}
+
+.hosts-places.is-open {
+  max-height:1800px;
+  opacity:1;
+  transform:translateY(0);
+
+  margin-top:20px;
+  padding-top:75px;
+  padding-bottom:85px;
+}
+
+@media(max-width:800px) {
+
+  .hosts-places.is-open {
+    padding-top:55px;
+    padding-bottom:65px;
+  }
+}
+/* ANIMACIÓN PACO Y NOE */
+
+.hosts-visual img {
+  transition:
+    transform .7s cubic-bezier(.22,1,.36,1),
+    filter .5s ease;
+}
+
+.hosts-visual:hover img {
+  transform:scale(1.035) translateY(-4px);
+}
+
+
+/* NOMBRES */
+
+.host-name {
+  position:absolute;
+  z-index:8;
+
+  padding:7px 13px;
+
+  background:#ff5b16;
+  color:#fff;
+
+  border-radius:20px;
+
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+
+  opacity:0;
+  transform:translateY(8px);
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,1,.36,1);
+
+  pointer-events:none;
+}
+
+.host-name-noe {
+  left:34%;
+  top:30%;
+}
+
+.host-name-paco {
+  right:18%;
+  top:37%;
+}
+
+.hosts-visual:hover .host-name {
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* MÓVIL: los nombres siempre visibles */
+
+@media(max-width:800px) {
+
+  .host-name {
+    opacity:1;
+    transform:none;
+    font-size:10px;
+    padding:6px 11px;
+  }
+
+  .host-name-noe {
+    left:23%;
+    top:30%;
+  }
+
+  .host-name-paco {
+    right:12%;
+    top:39%;
+  }
+}
+            /* NOMBRES PACO Y NOE - ESTILO MANUSCRITO */
+
+.host-name {
+  position:absolute;
+  z-index:8;
+
+  padding:0;
+  background:none;
+  border:0;
+  border-radius:0;
+
+  color:#ff5b16;
+
+  font-family:'DK Lemon Yellow Sun', cursive;
+  font-size:30px;
+  font-weight:400;
+  letter-spacing:.5px;
+  text-transform:none;
+
+  opacity:0;
+  transform:translateY(8px);
+
+  transition:
+    opacity .35s ease,
+    transform .5s cubic-bezier(.22,1,.36,1);
+
+  pointer-events:none;
+}
+
+/* Noe abajo de su lado */
+.host-name-noe {
+  left:31%;
+  top:auto;
+  bottom:-12px;
+  transform:translateY(8px) rotate(-4deg);
+}
+
+/* Paco abajo de su lado */
+.host-name-paco {
+  right:19%;
+  top:auto;
+  bottom:-14px;
+  transform:translateY(8px) rotate(3deg);
+}
+
+.hosts-visual:hover .host-name-noe {
+  opacity:1;
+  transform:translateY(0) rotate(-4deg);
+}
+
+.hosts-visual:hover .host-name-paco {
+  opacity:1;
+  transform:translateY(0) rotate(3deg);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .host-name {
+    opacity:1;
+    font-size:26px;
+  }
+
+  .host-name-noe {
+    left:19%;
+    top:auto;
+    bottom:-10px;
+    transform:rotate(-4deg);
+  }
+
+  .host-name-paco {
+    right:12%;
+    top:auto;
+    bottom:-12px;
+    transform:rotate(3deg);
+  }
+}
+            /* PACO Y NOE - FIRMAS BAJO LA FOTO */
+
+/* Recuperamos la composición original */
+.hosts-visual {
+  position:relative;
+  overflow:hidden !important;
+  padding-bottom:0 !important;
+}
+
+.hosts-visual-wrap {
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Ocultamos las etiquetas anteriores por si queda alguna regla */
+.host-name {
+  display:none !important;
+}
+
+.hosts-signatures {
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:4px 14% 0 18%;
+
+  opacity:0;
+  transform:translateY(-5px);
+
+  transition:
+    opacity .4s ease,
+    transform .55s cubic-bezier(.22,1,.36,1);
+}
+
+.hosts-signature {
+  color:#ff5b16;
+  font-family:'DK Lemon Yellow Sun', cursive;
+  font-size:31px;
+  font-weight:400;
+  line-height:1;
+}
+
+.hosts-signature-noe {
+  transform:rotate(-4deg);
+}
+
+.hosts-signature-paco {
+  transform:rotate(3deg);
+}
+
+/* Aparecen al entrar en la zona de la foto */
+.hosts-visual-wrap:hover .hosts-signatures {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Pequeño movimiento de la foto */
+.hosts-visual-wrap:hover .hosts-visual img {
+  transform:scale(1.025);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-signatures {
+    opacity:1;
+    transform:none;
+    min-height:46px;
+    padding:5px 12% 0 16%;
+  }
+
+  .hosts-signature {
+    font-size:27px;
+  }
+}
+            /* CORRECCIÓN TAMAÑO FOTO ANFITRIONES */
+
+.hosts-visual-wrap {
+  min-width:0;
+  height:560px;
+  position:relative;
+  display:block;
+}
+
+.hosts-visual {
+  position:relative;
+  width:100%;
+  height:500px;
+  min-height:500px !important;
+  overflow:hidden !important;
+  padding:0 !important;
+}
+
+.hosts-visual img {
+  position:absolute;
+  width:82% !important;
+  max-width:720px !important;
+  height:auto !important;
+  right:-1% !important;
+  bottom:0 !important;
+}
+
+.hosts-signatures {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:55px;
+  min-height:0;
+  padding:0 14% 0 18%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-visual-wrap {
+    width:100%;
+    height:390px;
+  }
+
+  .hosts-visual {
+    height:340px;
+    min-height:340px !important;
+  }
+
+  .hosts-visual img {
+    width:96% !important;
+    max-width:none !important;
+    right:-8% !important;
+  }
+
+  .hosts-signatures {
+    height:50px;
+    padding:0 12% 0 16%;
+  }
+}
+            /* ========================================
+   ANFITRIONES - AJUSTE DEFINITIVO
+======================================== */
+
+/* Recupera exactamente la composición original */
+.hosts-visual {
+  position:relative !important;
+  align-self:stretch !important;
+  min-height:560px !important;
+  height:auto !important;
+  overflow:hidden !important;
+  padding:0 !important;
+}
+
+/* Foto */
+.hosts-visual img {
+  position:absolute !important;
+  width:92% !important;
+  max-width:850px !important;
+  height:auto !important;
+
+  right:-2% !important;
+  bottom:-5px !important;
+
+  display:block !important;
+  z-index:3 !important;
+
+  filter:grayscale(100%) !important;
+
+  transition:
+    transform .65s cubic-bezier(.22,1,.36,1) !important;
+}
+
+/* Movimiento muy ligero al pasar */
+.hosts-visual:hover img {
+  transform:scale(1.025) !important;
+}
+
+
+/* NOMBRES: sobre la zona crema del recorte inferior */
+
+.host-name {
+  position:absolute !important;
+  z-index:8 !important;
+
+  padding:0 !important;
+  margin:0 !important;
+
+  background:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+
+  color:#ff5b16 !important;
+
+  font-family:'DK Lemon Yellow Sun', cursive !important;
+  font-size:30px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  letter-spacing:.3px !important;
+  text-transform:none !important;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,1,.36,1);
+}
+
+/* Noe */
+.host-name-noe {
+  left:29% !important;
+  top:auto !important;
+  right:auto !important;
+  bottom:2px !important;
+
+  transform:translateY(7px) rotate(-4deg);
+}
+
+/* Paco */
+.host-name-paco {
+  right:17% !important;
+  left:auto !important;
+  top:auto !important;
+  bottom:2px !important;
+
+  transform:translateY(7px) rotate(3deg);
+}
+
+/* Aparecen suavemente */
+.hosts-visual:hover .host-name-noe {
+  opacity:1;
+  transform:translateY(0) rotate(-4deg);
+}
+
+.hosts-visual:hover .host-name-paco {
+  opacity:1;
+  transform:translateY(0) rotate(3deg);
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .hosts-visual {
+    width:100% !important;
+    min-height:380px !important;
+    height:auto !important;
+  }
+
+  .hosts-visual img {
+    width:105% !important;
+    max-width:none !important;
+    right:-12% !important;
+    bottom:-5px !important;
+  }
+
+  .host-name {
+    opacity:1 !important;
+    font-size:25px !important;
+  }
+
+  .host-name-noe {
+    left:20% !important;
+    bottom:10px !important;
+    transform:rotate(-4deg);
+  }
+
+  .host-name-paco {
+    right:12% !important;
+    bottom:9px !important;
+    transform:rotate(3deg);
+  }
+}
+            /* REACTIVAR NOMBRES PACO Y NOE */
+.host-name {
+  display:block !important;
+}
+  
+
+/* SELECTOR DE IDIOMA - VERSION ESTABLE */
+.lang-menu {
+  position:relative;
+  display:inline-block;
+  margin-left:8px;
+}
+
+.lang-current {
+  appearance:none;
+  border:0;
+  background:#ff5b16;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:28px;
+  font-family:inherit;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.lang-current span {
+  margin-left:4px;
+  font-size:9px;
+}
+
+.lang-options {
+  display:none;
+  position:absolute;
+  top:calc(100% + 7px);
+  right:0;
+  min-width:72px;
+  padding:6px 0;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(0,0,0,.15);
+  z-index:1000;
+}
+
+.lang-menu:hover .lang-options,
+.lang-menu:focus-within .lang-options {
+  display:block;
+}
+
+.lang-options a {
+  display:block;
+  padding:9px 14px;
+  color:#243B7A !important;
+  text-decoration:none;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.lang-options a:hover,
+.lang-options a:focus {
+  background:#f7f4ee;
+  color:#ff5b16 !important;
+}
+</style>
+          
+</head>
+
+<body>
+
+<header>
+  <img class="logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
+
+  <nav>
+   <a href="#apartamentos">Apartamentos</a>
+<a href="#anfitriones">Anfitriones</a>
+<a href="#contacto">Contacto</a>
+            <div class="lang-menu">
+  <button class="lang-current" type="button" aria-label="Cambiar idioma">ES <span aria-hidden="true">▾</span></button>
+  <div class="lang-options">
+    <a href="index-en.html">EN</a>
+    <a href="index-fr.html">FR</a>
+  </div>
+</div>
+    
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>
+      Tu mar.<br>
+      Tu tiempo.<br>
+      <span class="orange">Tu estancia.</span>
+    </h1>
+    <a class="btn" href="#apartamentos">Ver apartamentos</a>
+  </div>
+</section>
+
+<section class="intro" id="peniscola">
+  <div>
+    <h2>
+      Desayunar fuera.<br>
+      Pasear sin prisa.<br>
+      Vivir el Mediterráneo.
+    </h2>
+   
+  </div>
+
+ <img src="images/lifestyle/noche.jpg" alt="Cena mediterránea">
+
+  <div class="orange-block"></div>
+</section>
+
+<section class="apartments" id="apartamentos">
+  <div class="apartments-top">
+    <div>
+      <div class="label">Apartamentos</div>
+      <h2>Elige tu lugar</h2>
+    </div>
+   
+  </div>
+
+  <div class="card">
+  <a class="card-image-link" href="perla.html">
+    <img src="images/apartamentos/perla/perla-hero-vistas.jpg" alt="Apartamento Perla">
+  </a>
+
+  <div class="card-content">
+    <div>
+      <h3><a class="card-title-link" href="perla.html">Apartamento Perla</a></h3>
+      <span>Vistas, calma y aparcamiento fácil</span>
+      <p class="card-desc">Peñíscola entera delante, silencio detrás.</p>
+    </div>
+
+    <a class="card-cta" href="perla.html">Ver Perla</a>
+  </div>
+</div>
+
+    <div class="card">
+  <a class="card-image-link" href="santa-maria.html">
+    <img src="images/apartamentos/santa maria/santa-maria-1.jpg" alt="Apartamento Santa María">
+  </a>
+
+  <div class="card-content">
+    <div>
+      <h3><a class="card-title-link" href="santa-maria.html">Apartamento Santa María</a></h3>
+      <span>Casco antiguo, paseo y vida junto al mar</span>
+      <p class="card-desc">Peñíscola a pie, el mar al lado.</p>
+    </div>
+
+    <a class="card-cta" href="santa-maria.html">Ver Santa María</a>
+  </div>
+</div>
+  </div>
+          <section class="owners-section">
+
+  <div class="owners-copy">
+    <span>Propietarios</span>
+
+    <h2>¿Tienes un apartamento en Peñíscola?</h2>
+
+    <p>
+      Si tienes una vivienda turística y buscas una gestión cercana, cuidada
+      y coherente con la forma en que presentamos nuestros alojamientos,
+      podemos hablarlo.
+    </p>
+
+    <a class="owners-cta" href="mailto:hello@marevostrum.es">
+      Quiero saber más
+    </a>
+  </div>
+
+</section>
+
+
+         <section class="hosts-section" id="anfitriones">
+
+  <div class="hosts-inner">
+
+    <div class="hosts-content">
+
+      <span class="hosts-kicker">Anfitriones</span>
+
+      <h2>
+        Las personas<br>
+        detrás de<br>
+        <strong>Marevostrum.</strong>
+      </h2>
+
+      <p>
+        Marevostrum nació de nuestras escapadas a Peñíscola:
+        venir para bajar el ritmo, pasear, comer bien, beber algo frente al mar
+        y alejarnos un poco del ruido.
+      </p>
+
+      <p>
+        Con el tiempo, esos momentos se convirtieron en algo más.
+        Hoy queremos compartir nuestros rincones y nuestra forma de vivir Peñíscola.
+      </p>
+
+      <button
+  type="button"
+  class="hosts-button"
+  id="toggle-sitios"
+  aria-expanded="false"
+  aria-controls="sitios-marevostrum"
+>
+  Sitios a los que volvemos y por qué <span>↓</span>
+</button>
+
+    </div>
+<div class="hosts-visual">
+
+  <div class="hosts-blue"></div>
+  <div class="hosts-sun"></div>
+
+  <div class="hosts-rays">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <img
+    src="images/lifestyle/anfitriones.png"
+    alt="Paco y Noe, anfitriones de Marevostrum"
+  >
+
+  <span class="host-name host-name-noe">Noe</span>
+  <span class="host-name host-name-paco">Paco</span>
+
+</div>
+            <div class="hosts-places" id="sitios-marevostrum">
+
+  <div class="hosts-places-heading">
+    <span class="hosts-kicker">Nuestra Peñíscola</span>
+
+    <h3>Sitios a los que volvemos y por qué.</h3>
+
+    <p>
+      No es una lista de “los mejores”. Son lugares que forman parte
+      de nuestra manera de vivir Peñíscola.
+    </p>
+  </div>
+
+  <div class="hosts-places-grid">
+
+    <article class="host-place">
+      <h4>Tasca Pepe</h4>
+      <p>
+        Un picoteo, cervezas, el mar y la gente de toda la vida.
+      </p>
+              <a
+  class="host-place-map"
+  href="https://www.google.com/maps/place/Tasca+Pepe/@40.3600729,0.4005697,1086m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a04794569f38b7:0x91ef942668609e46!8m2!3d40.3600688!4d0.40315!16s%2Fg%2F11k21wvbmn?entry=ttu&g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver en Google Maps ↗
+</a>
+    </article>
+
+    <article class="host-place">
+  <h4>El Cañar</h4>
+
+  <p>
+    La comida de toda la vida hecha con un cariño increíble.
+    Huye del bullicio y pide su tosta de pulpo.
+  </p>
+
+  <a
+    class="host-place-map"
+    href="https://www.google.com/maps/place/RESTAURANTE+EL+CA%C3%91AR/@40.3642475,0.3958519,1086m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a046eeae95b9ad:0xed4df687daa01d6b!8m2!3d40.3642434!4d0.3984322!16s%2Fg%2F11c562kqqj?entry=ttu&amp;g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ver en Google Maps ↗
+  </a>
+
+</article>
+
+    <article class="host-place">
+      <h4>El Rebost</h4>
+      <p>
+        Llevado por una familia, en una calle llena de vida,
+        donde poder comer unos buenos pescaditos fritos.
+      </p>
+              <a
+  class="host-place-map"
+  href="https://www.google.com/maps/place/Bar+%26+Pulper%C3%ADa+El+Rebost/@40.3578845,0.4051642,1086m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a0479304b6cbbf:0x64c0dd89598e632e!8m2!3d40.3578804!4d0.4077445!16s%2Fg%2F11h6q4xl8v?entry=ttu&amp;g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver en Google Maps ↗
+</a>
+    </article>
+
+    <article class="host-place">
+      <h4>Restaurante Porteta</h4>
+      <p>
+        Un mirador al mar para cenar con el Mediterráneo delante
+        y disfrutar de la cocina de una familia del pueblo.
+      </p>
+          
+<a
+  class="host-place-map"
+  href="https://www.google.com/maps/place/Restaurante+Porteta/@40.3595299,0.4038159,1086m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12a046f0994e553f:0xa2e1babe0a0a1e96!8m2!3d40.3595258!4d0.4063962!16s%2Fg%2F11c0rpgf2r?entry=ttu&amp;g_ep=EgoyMDI2MDkyOS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver en Google Maps ↗
+</a>
+    </article>
+
+  </div>
+
+  <p class="hosts-places-note">
+    Recomendamos momentos, no rankings.
+  </p>
+
+</div>
+
+  </div>
+
+</section>
+<footer id="contacto">
+  <img src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
+
+  <p class="footer-orange">
+    Compartimos contigo<br>
+    el mar y la casa.
+  </p>
+
+ <p>
+  <a href="tel:+34613049440">+34 613 049 440</a><br>
+  <a href="mailto:hello@marevostrum.es">hello@marevostrum.es</a>
+</p>
+
+  <p>
+    Aviso legal · Privacidad · Cookies
+  </p>
+</footer>
+<script>
+  const toggleSitios = document.getElementById('toggle-sitios');
+  const sitiosMarevostrum = document.getElementById('sitios-marevostrum');
+
+  toggleSitios.addEventListener('click', function () {
+
+    const abierto = sitiosMarevostrum.classList.toggle('is-open');
+
+    toggleSitios.setAttribute('aria-expanded', abierto);
+
+    toggleSitios.querySelector('span').textContent = abierto ? '↑' : '↓';
+
+    if (abierto) {
+      setTimeout(() => {
+        sitiosMarevostrum.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
+
+  });
+</script>
+</body>
+</html>
