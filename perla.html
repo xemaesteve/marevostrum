@@ -514,6 +514,7 @@
       background:#ff5b16;
       color:white;
       padding:18px 30px;
+      border-radius:28px;
       text-transform:uppercase;
       font-weight:bold;
       letter-spacing:1.5px;
@@ -598,6 +599,98 @@
       }
     }
 
+  
+    /* RESERVA EN EL MENÚ SUPERIOR */
+    .nav-booking {
+      position:relative;
+      display:inline-block;
+    }
+
+    .nav-booking summary {
+      list-style:none;
+      cursor:pointer;
+      background:#ff5b16;
+      color:white;
+      padding:14px 22px;
+      border-radius:28px;
+      font-size:13px;
+      font-weight:bold;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      user-select:none;
+    }
+
+    .nav-booking summary::-webkit-details-marker {
+      display:none;
+    }
+
+    .nav-booking summary::after {
+      content:" ▾";
+      font-size:10px;
+    }
+
+    .nav-booking[open] summary::after {
+      content:" ▴";
+    }
+
+    .nav-booking-options {
+      position:absolute;
+      right:0;
+      top:calc(100% + 8px);
+      min-width:210px;
+      background:white;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      overflow:hidden;
+      z-index:100;
+    }
+
+    .nav-booking-options a {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:14px 16px;
+      color:#243B7A !important;
+      background:white;
+      text-decoration:none;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:.8px;
+      text-transform:none;
+      border-bottom:1px solid rgba(36,59,122,.10);
+    }
+
+    .nav-booking-options a:last-child {
+      border-bottom:0;
+    }
+
+    .nav-booking-options a:hover {
+      background:#f7f4ee;
+      color:#ff5b16 !important;
+    }
+
+    .nav-booking-options a::after {
+      content:"↗";
+      color:#ff5b16;
+      font-size:13px;
+    }
+
+    @media(max-width:800px) {
+      .nav-booking {
+        width:auto;
+      }
+
+      .nav-booking summary {
+        padding:11px 16px;
+        font-size:11px;
+      }
+
+      .nav-booking-options {
+        left:0;
+        right:auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -612,7 +705,14 @@
     <a href="index.html#apartamentos">Apartamentos</a>
     <a href="index.html#anfitriones">Anfitriones</a>
     <a href="index.html#contacto">Contacto</a>
-    <a class="whatsapp" href="#reserva">Reservar</a>
+    <details class="nav-booking">
+      <summary>Reservar</summary>
+      <div class="nav-booking-options">
+        <a href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Airbnb</a>
+        <a href="https://www.booking.com/hotel/es/marevostrum-perla-duplex-moderno-con-vistas.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+        <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
+      </div>
+    </details>
   </nav>
 </header>
 
