@@ -570,6 +570,162 @@
         font-size:32px;
       }
     }
+    /* =========================
+   MAPA DE SITUACIÓN
+========================= */
+
+.location-section {
+  max-width:1200px;
+  margin:0 auto;
+  padding:90px 7%;
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:60px;
+  align-items:stretch;
+}
+
+.location-copy {
+  max-width:430px;
+}
+
+.location-kicker {
+  display:block;
+  margin-bottom:14px;
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.location-copy h2 {
+  margin:0 0 22px;
+  color:#243B7A;
+  font-size:42px;
+  line-height:1.08;
+  font-weight:300;
+}
+
+.location-copy p {
+  margin:0 0 24px;
+  color:#243B7A;
+  font-size:16px;
+  line-height:1.75;
+  font-weight:300;
+}
+
+.location-link {
+  color:#ff5b16;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.location-link:hover {
+  text-decoration:underline;
+}
+
+.location-map {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  min-height:0;
+}
+
+.location-map img {
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+/* PIN */
+
+.location-pin {
+  position:absolute;
+  width:26px;
+  height:26px;
+  background:#ff5b16;
+  border:4px solid white;
+  border-radius:50%;
+  box-shadow:0 5px 15px rgba(0,0,0,.22);
+  z-index:5;
+  transform:translate(-50%, -50%);
+  animation:mapPin 2s ease-in-out infinite;
+}
+
+.location-pin::after {
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:38px;
+  height:38px;
+  border:2px solid #ff5b16;
+  border-radius:50%;
+  transform:translate(-50%, -50%);
+  opacity:.45;
+  animation:mapPulse 2s ease-out infinite;
+}
+
+@keyframes mapPin {
+  0%, 100% {
+    transform:translate(-50%, -50%) translateY(0);
+  }
+
+  50% {
+    transform:translate(-50%, -50%) translateY(-6px);
+  }
+}
+
+@keyframes mapPulse {
+  0% {
+    transform:translate(-50%, -50%) scale(.7);
+    opacity:.5;
+  }
+
+  100% {
+    transform:translate(-50%, -50%) scale(1.5);
+    opacity:0;
+  }
+}
+
+
+/* POSICIÓN SANTA MARÍA */
+
+.location-pin-santa {
+  left:88%;
+  top:56%;
+}
+
+
+/* MÓVIL */
+
+@media(max-width:800px) {
+
+  .location-section {
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:65px 6%;
+  }
+
+  .location-copy {
+    max-width:none;
+  }
+
+  .location-copy h2 {
+    font-size:34px;
+  }
+
+  .location-map {
+    min-height:300px;
+  }
+}
   </style>
 </head>
 
@@ -718,7 +874,37 @@
     <span>Azotea con vistas</span>
     <span>Ubicación en casco antiguo</span>
   </div>
+<section class="location-section">
 
+  <div class="location-copy">
+    <span class="location-kicker">Dónde estamos</span>
+
+    <h2>En pleno casco antiguo.</h2>
+
+    <p>
+      Sal de casa y Peñíscola empieza en la puerta:
+      el mar, las calles del casco antiguo y todo a pocos pasos.
+    </p>
+
+    <a
+      class="location-link"
+      href="https://www.google.com/maps/search/?api=1&query=Calle+Gonzalez+Granda+14+Peñiscola"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Abrir en Google Maps ↗
+    </a>
+  </div>
+
+  <div class="location-map">
+
+    <img src="/images/mapa-peniscola.png" alt="">
+
+    <span class="location-pin location-pin-santa" aria-hidden="true"></span>
+
+  </div>
+
+</section>
 </section>
 
 <section class="apartment-features">
