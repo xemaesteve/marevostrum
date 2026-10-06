@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apartamento Santa María | Marevostrum Estancias</title>
+  <title>Appartement Perla | Marevostrum Estancias</title>
 
   <link href="https://fonts.cdnfonts.com/css/gotham-ssm" rel="stylesheet">
 
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
 
-    html {
-      -webkit-text-size-adjust:100%;
-      text-size-adjust:100%;
-    }
-
     body {
       font-family:'Gotham SSm', sans-serif;
       background:#f7f4ee;
       color:#243B7A;
-      overflow-x:hidden;
     }
 
     header {
@@ -60,11 +54,11 @@
       border-radius:28px;
     }
 
-    .hero-apartment {
+    .hero-perla {
       min-height:92vh;
       background:
-        linear-gradient(90deg, rgba(0,39,78,.78) 0%, rgba(0,39,78,.38) 50%, rgba(0,0,0,.10) 100%),
-        url("images/apartamentos/santa maria/santa-maria-1.jpg");
+        linear-gradient(90deg, rgba(0,39,78,.82) 0%, rgba(0,39,78,.42) 48%, rgba(0,0,0,.12) 100%),
+        url("images/apartamentos/perla/perla-hero-vistas.jpg");
       background-size:cover;
       background-position:center;
       display:flex;
@@ -77,43 +71,25 @@
       max-width:660px;
     }
 
-    .hero-brand {
+    .label {
       display:block;
       color:#ff5b16;
-      font-size:14px;
+      text-transform:uppercase;
+      font-size:13px;
       letter-spacing:2px;
       font-weight:600;
-      margin-bottom:18px;
-    }
-
-    .hero-type {
-      display:block;
-      color:white;
-      font-size:13px;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      font-weight:500;
-      margin-bottom:10px;
+      margin-bottom:22px;
     }
 
     h1 {
-      font-size:88px;
-      line-height:.92;
-      letter-spacing:.5px;
-      text-transform:none;
-      font-weight:700;
-      margin-bottom:24px;
+      font-size:68px;
+      line-height:1.05;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:30px;
     }
 
-    .hero-claim {
-      font-size:28px;
-      line-height:1.25;
-      font-weight:300;
-      max-width:620px;
-      margin-bottom:24px;
-    }
-
-    .hero-content p:not(.hero-claim) {
+    .hero-content p {
       font-size:18px;
       line-height:1.7;
       font-weight:300;
@@ -147,7 +123,7 @@
 
     .info-grid {
       display:grid;
-      grid-template-columns:repeat(5, 1fr);
+      grid-template-columns:repeat(6, 1fr);
       gap:18px;
     }
 
@@ -172,7 +148,7 @@
       font-weight:600;
     }
 
-    .apartment-gallery {
+    .perla-gallery {
       padding:90px 7%;
       background:#f7f4ee;
       color:#243B7A;
@@ -183,8 +159,7 @@
       margin-bottom:42px;
     }
 
-    .gallery-header span,
-    .section-kicker {
+    .gallery-header span {
       display:block;
       color:#ff5b16;
       text-transform:uppercase;
@@ -202,18 +177,23 @@
 
     .gallery-grid {
       display:grid;
-      grid-template-columns:repeat(2, 1fr);
+      grid-template-columns:1.35fr 1fr 1fr;
+      grid-template-rows:260px 260px;
       gap:20px;
     }
 
     .gallery-grid img {
       width:100%;
-      height:360px;
+      height:100%;
       object-fit:cover;
       display:block;
     }
 
-    .intro-apartment {
+    .gallery-large {
+      grid-row:span 2;
+    }
+
+    .intro-perla {
       background:white;
       padding:80px 7%;
       display:grid;
@@ -222,20 +202,20 @@
       align-items:start;
     }
 
-    .intro-apartment h2 {
+    .intro-perla h2 {
       font-size:42px;
       line-height:1.15;
       font-weight:300;
       margin-bottom:24px;
     }
 
-    .intro-apartment p {
+    .intro-perla p {
       font-size:16px;
       line-height:1.8;
       font-weight:300;
     }
 
-    .apartment-details {
+    .perla-details {
       padding:80px 7%;
       background:#f7f4ee;
       color:#243B7A;
@@ -244,6 +224,16 @@
     .details-header {
       max-width:680px;
       margin-bottom:42px;
+    }
+
+    .details-header span {
+      display:block;
+      color:#ff5b16;
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:600;
+      margin-bottom:14px;
     }
 
     .details-header h2 {
@@ -263,12 +253,10 @@
       background:white;
       border:1px solid rgba(36,59,122,.18);
       padding:28px;
-      min-height:190px;
     }
 
     .distribution h3 {
       font-size:20px;
-      line-height:1.15;
       text-transform:uppercase;
       letter-spacing:1.5px;
       margin-bottom:14px;
@@ -304,7 +292,7 @@
       font-weight:600;
     }
 
-    .apartment-features {
+    .perla-features {
       padding:80px 7%;
       background:white;
       display:grid;
@@ -342,20 +330,14 @@
       font-weight:300;
     }
 
-    .apartment-cta {
+    .perla-cta {
       padding:90px 7%;
       background:#243B7A;
       color:white;
       text-align:center;
     }
 
-    .cta-logo {
-      width:135px;
-      filter:brightness(0) invert(1);
-      margin-bottom:28px;
-    }
-
-    .apartment-cta span {
+    .perla-cta span {
       display:block;
       color:#ff5b16;
       text-transform:uppercase;
@@ -365,7 +347,7 @@
       margin-bottom:16px;
     }
 
-    .apartment-cta h2 {
+    .perla-cta h2 {
       font-size:42px;
       line-height:1.15;
       font-weight:300;
@@ -373,7 +355,7 @@
       margin:0 auto 24px;
     }
 
-    .apartment-cta p {
+    .perla-cta p {
       font-size:16px;
       line-height:1.8;
       font-weight:300;
@@ -381,169 +363,113 @@
       margin:0 auto 34px;
     }
 
-    .apartment-cta .btn-secondary {
+    .perla-cta .btn-secondary {
       border-color:white;
     }
 
     @media(max-width:800px) {
       header {
-        padding:28px 6%;
-        align-items:flex-start;
+        padding:26px 6%;
+        flex-direction:column;
+        gap:18px;
       }
 
       .logo {
-        width:190px;
+        width:210px;
       }
 
-      header nav {
-        display:none;
-      }
-
-      .hero-apartment {
-        min-height:92vh;
-        padding:150px 6% 60px;
-        background-position:center center;
-      }
-
-      .hero-brand {
-        font-size:13px;
-        letter-spacing:1.8px;
-        margin-bottom:16px;
-      }
-
-      .hero-type {
+      nav {
+        gap:16px;
+        flex-wrap:wrap;
         font-size:11px;
-        letter-spacing:2.5px;
-        margin-bottom:8px;
+      }
+
+      .hero-perla {
+        min-height:88vh;
+        padding:165px 6% 80px;
       }
 
       h1 {
-        font-size:52px;
-        line-height:.92;
-        letter-spacing:.3px;
-        margin-bottom:20px;
+        font-size:42px;
       }
 
-      .hero-claim {
-        font-size:22px;
-        line-height:1.3;
-        margin-bottom:22px;
-      }
-
-      .hero-content p:not(.hero-claim) {
-        font-size:17px;
-        line-height:1.65;
-        margin-bottom:28px;
-      }
-
-      .btn {
-        display:block;
-        width:100%;
-        max-width:320px;
-        text-align:center;
-        margin:0 0 14px 0;
-        padding:15px 20px;
-        font-size:11px;
+      .hero-content p {
+        font-size:16px;
       }
 
       .quick-info {
-        padding:34px 6%;
+        padding:36px 6%;
       }
 
       .info-grid {
         grid-template-columns:1fr 1fr;
-        gap:12px;
       }
 
       .info-item {
-        padding:18px 16px;
+        padding:22px 18px;
       }
 
       .info-item strong {
-        font-size:26px;
+        font-size:28px;
       }
 
       .info-item span {
-        font-size:10px;
-        letter-spacing:1.2px;
+        font-size:11px;
       }
 
-      .apartment-gallery {
+      .perla-gallery {
         padding:60px 6%;
       }
 
-      .gallery-header h2,
-      .intro-apartment h2,
-      .details-header h2,
-      .apartment-cta h2 {
+      .gallery-header h2 {
         font-size:30px;
-        line-height:1.15;
-        letter-spacing:0;
       }
 
       .gallery-grid {
         grid-template-columns:1fr;
+        grid-template-rows:auto;
       }
 
-      .gallery-grid img {
+      .gallery-grid img,
+      .gallery-large {
         height:280px;
+        grid-row:auto;
       }
 
-      .intro-apartment {
+      .intro-perla {
         grid-template-columns:1fr;
         padding:60px 6%;
         gap:28px;
       }
 
-      .apartment-details {
-        padding:58px 6%;
+      .intro-perla h2 {
+        font-size:32px;
       }
 
-      .details-header {
-        margin-bottom:32px;
+      .perla-details {
+        padding:60px 6%;
       }
 
-      .section-kicker {
-        font-size:11px;
-        letter-spacing:2px;
+      .details-header h2 {
+        font-size:30px;
       }
 
       .distribution {
         grid-template-columns:1fr;
-        gap:18px;
-      }
-
-      .distribution div {
-        padding:24px;
-        min-height:auto;
-      }
-
-      .distribution h3 {
-        font-size:20px;
-        line-height:1.05;
-        letter-spacing:1.4px;
-        margin-bottom:14px;
-      }
-
-      .distribution p {
-        font-size:15px;
-        line-height:1.6;
       }
 
       .services {
         grid-template-columns:1fr;
         padding:24px;
-        gap:16px;
       }
 
       .services span {
-        font-size:15px;
-        line-height:1.5;
+        font-size:14px;
       }
 
-      .apartment-features {
+      .perla-features {
         grid-template-columns:1fr;
-        padding:58px 6%;
+        padding:60px 6%;
         gap:20px;
       }
 
@@ -553,20 +479,18 @@
 
       .feature h3 {
         font-size:20px;
-        line-height:1.15;
       }
 
-      .apartment-cta {
+      .perla-cta {
         padding:70px 6%;
       }
 
-      .cta-logo {
-        width:115px;
-        margin-bottom:24px;
+      .perla-cta h2 {
+        font-size:32px;
       }
 
-      .apartment-cta h2 {
-        font-size:32px;
+      .btn {
+        margin-bottom:12px;
       }
     }
   
@@ -841,59 +765,53 @@
 <body>
 
 <header>
-  <a href="index.html">
+  <a href="index-fr.html">
     <img class="logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
   </a>
 
   <nav>
-    <a href="index.html#apartamentos">Apartamentos</a>
-    <a href="index.html#anfitriones">Anfitriones</a>
-    <a href="index.html#contacto">Contacto</a>
+    <a href="index-fr.html#apartamentos">Appartements</a>
+    <a href="index-fr.html#anfitriones">Hôtes</a>
+    <a href="index-fr.html#contacto">Contact</a>
     <details class="nav-booking">
-      <summary>Reservar</summary>
+      <summary>Réserver</summary>
       <div class="nav-booking-options">
-        <a href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Airbnb</a>
-        <a href="https://www.booking.com/hotel/es/santa-maria-casco-antiguo.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
-        <a href="https://booking.bluemoonlightgroup.com/alquiler/apartamento-peniscola-santa-maria-marevostrum-751394.html" target="_blank" rel="noopener noreferrer">Reserva directa</a>
+        <a href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Airbnb</a>
+        <a href="https://www.booking.com/hotel/es/marevostrum-perla-duplex-moderno-con-vistas.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+        <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
       </div>
     </details>
     <div class="lang-menu">
-      <button class="lang-current" type="button" aria-label="Cambiar idioma">ES <span aria-hidden="true">▾</span></button>
+      <button class="lang-current" type="button" aria-label="Changer de langue">FR <span aria-hidden="true">▾</span></button>
       <div class="lang-options">
-        <a href="santa-maria-en.html">EN</a>
-        <a href="santa-maria-fr.html">FR</a>
+        <a href="perla.html">ES</a>
+        <a href="perla-en.html">EN</a>
       </div>
     </div>
 
   </nav>
 </header>
 
-<section class="hero-apartment">
+<section class="hero-perla">
   <div class="hero-content">
-    <span class="hero-brand">Marevostrum</span>
+    <span class="label">Appartement Perla</span>
 
-    <span class="hero-type">Apartamento</span>
-
-    <h1>Santa María</h1>
-
-    <p class="hero-claim">
-      Casco antiguo, mar y calma para dos.
-    </p>
+    <h1>Tout Peñíscola devant vous, le silence derrière.</h1>
 
     <p>
-      En pleno casco antiguo de Peñíscola, un apartamento cómodo y recogido
-      para vivir el centro caminando, con el mar y los restaurantes muy cerca.
+      Vue, calme et stationnement facile. Un appartement pour contempler la mer,
+      télétravailler à la lumière naturelle et rentrer sans le bruit du centre.
     </p>
 
     <details class="booking-menu">
-      <summary>Reservar</summary>
+      <summary>Réserver</summary>
       <div class="booking-options">
-      <a href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Airbnb</a>
-      <a href="https://www.booking.com/hotel/es/santa-maria-casco-antiguo.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
-      <a href="https://booking.bluemoonlightgroup.com/alquiler/apartamento-peniscola-santa-maria-marevostrum-751394.html" target="_blank" rel="noopener noreferrer">Reserva directa</a>
+      <a href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Airbnb</a>
+      <a href="https://www.booking.com/hotel/es/marevostrum-perla-duplex-moderno-con-vistas.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+      <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
     </div>
     </details>
-    <a class="btn btn-secondary" href="index.html">Volver</a>
+    <a class="btn btn-secondary" href="index-fr.html">Retour</a>
   </div>
 </section>
 
@@ -901,162 +819,153 @@
 
   <div class="info-grid">
     <div class="info-item">
+      <strong>5</strong>
+      <span>voyageurs</span>
+    </div>
+
+    <div class="info-item">
       <strong>2</strong>
-      <span>huéspedes</span>
+      <span>chambres</span>
+    </div>
+
+    <div class="info-item">
+      <strong>3</strong>
+      <span>lits</span>
+    </div>
+
+    <div class="info-item">
+      <strong>+</strong>
+      <span>grand canapé</span>
     </div>
 
     <div class="info-item">
       <strong>1</strong>
-      <span>dormitorio</span>
+      <span>salle de bain</span>
     </div>
 
     <div class="info-item">
-      <strong>1</strong>
-      <span>cama</span>
-    </div>
-
-    <div class="info-item">
-      <strong>1</strong>
-      <span>baño</span>
-    </div>
-
-    <div class="info-item">
-      <strong>45</strong>
+      <strong>65</strong>
       <span>m²</span>
     </div>
   </div>
 
 </section>
 
-<section class="apartment-gallery">
+<section class="perla-gallery">
 
   <div class="gallery-header">
-    <span>El apartamento</span>
-    <h2>Una estancia cómoda para vivir Peñíscola desde el casco antiguo.</h2>
+    <span>L’appartement</span>
+    <h2>Des espaces simples, une lumière méditerranéenne et des vues dégagées.</h2>
   </div>
 
   <div class="gallery-grid">
-    <img src="images/apartamentos/santa maria/santa-maria-1.jpg" alt="Apartamento Santa María">
+    <img class="gallery-large" src="images/apartamentos/perla/perla-1-nueva.jpg" alt="Salon et cuisine de l’Appartement Perla">
 
-    <img src="images/apartamentos/santa maria/santa-maria-2.jpg" alt="Salón del Apartamento Santa María">
+    <img src="images/apartamentos/perla/cocina-perla.jpg" alt="Détail de la cuisine de l’Appartement Perla">
 
-    <img src="images/apartamentos/santa maria/santa-maria-3.jpg" alt="Dormitorio del Apartamento Santa María">
+    <img src="images/apartamentos/perla/habitacion-perla-1.jpg" alt="Chambre principale de l’Appartement Perla">
 
-    <img src="images/apartamentos/santa maria/santa-maria-4.jpg" alt="Balcón o vistas del Apartamento Santa María">
+    <img src="images/apartamentos/perla/habitacion-perla-2.jpg" alt="Chambre avec lits superposés de l’Appartement Perla">
+
+    <img src="images/apartamentos/perla/piscina-perla.jpg" alt="Piscine de l’Appartement Perla">
   </div>
 
 </section>
 
-<section class="intro-apartment">
+<section class="intro-perla">
   <div>
-    <h2>En pleno casco antiguo, a un paso del mar.</h2>
+    <h2>Vue, calme et stationnement facile.</h2>
   </div>
 
   <div>
     <p>
-      Santa María es un apartamento para dos personas en el corazón de Peñíscola:
-      cómodo, recogido y pensado para vivir el casco antiguo caminando, con playa,
-      restaurantes y rincones con encanto muy cerca.
+      Perla se trouve sur les hauteurs, tout près de Peñíscola. Une autre façon d’y séjourner :
+      plus d’espace, de plus belles vues et la facilité de se garer sans tourner en rond.
     </p>
   </div>
 </section>
 
-<section class="apartment-details">
+<section class="perla-details">
 
   <div class="details-header">
-    <span class="section-kicker">Distribución y servicios</span>
-    <h2>Todo lo necesario para una estancia cómoda en el centro.</h2>
+    <span>Agencement et équipements</span>
+    <h2>Tout le nécessaire pour un séjour confortable.</h2>
   </div>
 
   <div class="distribution">
     <div>
-      <h3>Dormitorio principal</h3>
-      <p>Una cama doble para dos huéspedes.</p>
+      <h3>Chambre principale</h3>
+      <p>Un lit double.</p>
     </div>
 
     <div>
-      <h3>Cocina abierta</h3>
-      <p>Cocina conectada con el salón y totalmente equipada.</p>
+      <h3>Chambre 2</h3>
+      <p>Deux lits superposés.</p>
     </div>
 
     <div>
-      <h3>Baño</h3>
-      <p>Baño moderno con ducha.</p>
-    </div>
-
-    <div>
-      <h3>Balcón privado</h3>
-      <p>Un pequeño espacio exterior con mesa y dos sillas.</p>
-    </div>
-
-    <div>
-      <h3>Azotea con vistas</h3>
-      <p>Acceso a una azotea para desconectar después del día.</p>
+      <h3>Salon</h3>
+      <p>Grand canapé pouvant accueillir une personne.</p>
     </div>
   </div>
 
   <div class="services">
-    <span>Cocina equipada</span>
-    <span>Lavadora</span>
-    <span>Baño con ducha</span>
-    <span>Balcón privado</span>
-    <span>Azotea con vistas</span>
-    <span>Ubicación en casco antiguo</span>
+    <span>Piscine commune</span>
+    <span>Wifi</span>
+    <span>Climatisation</span>
+    <span>Serviettes incluses</span>
+    <span>Fumeurs acceptés</span>
   </div>
 
 </section>
 
-<section class="apartment-features">
+<section class="perla-features">
 
   <div class="feature">
     <span>01</span>
-    <h3>Casco antiguo</h3>
-    <p>Una ubicación para salir andando y vivir Peñíscola desde dentro.</p>
+    <h3>Vues panoramiques</h3>
+    <p>Peñíscola, le château et la Méditerranée s’ouvrent devant vous.</p>
   </div>
 
   <div class="feature">
     <span>02</span>
-    <h3>Ideal para dos</h3>
-    <p>Un apartamento cómodo para parejas o escapadas tranquilas junto al mar.</p>
+    <h3>Stationnement facile</h3>
+    <p>Arrivez, garez la voiture et oubliez la recherche d’une place dans le centre.</p>
   </div>
 
   <div class="feature">
     <span>03</span>
-    <h3>Balcón privado</h3>
-    <p>Un pequeño rincón exterior para desayunar o parar un momento.</p>
+    <h3>Télétravailler face à la mer</h3>
+    <p>Lumière naturelle, calme et une vue qui change le rythme de la journée.</p>
   </div>
 
   <div class="feature">
     <span>04</span>
-    <h3>Azotea con vistas</h3>
-    <p>Un espacio para desconectar al final del día.</p>
+    <h3>Plage, collines et vélo</h3>
+    <p>Un point de départ paisible entre mer, sentiers et nature.</p>
   </div>
 
 </section>
 
-<section class="apartment-cta" id="reserva">
+<section class="perla-cta" id="reserva">
+  <span>Réserver Perla</span>
 
-  <img class="cta-logo" src="MAREVOSTRUM logo.svg" alt="Marevostrum Estancias">
-
-  <span>Reserva Santa María</span>
-
-  <h2>Un apartamento para vivir Peñíscola a pie.</h2>
+  <h2>Un appartement pour profiter de Peñíscola à votre rythme.</h2>
 
   <p>
-    Consulta disponibilidad y prepara una estancia cómoda, cerca del mar
-    y de la vida diaria de Peñíscola.
+    Consultez les disponibilités et préparez un séjour avec vue sur mer,
+    un espace confortable et une terrasse où l’on a envie de rester.
   </p>
 
   <details class="booking-menu">
-    <summary>Reservar</summary>
+    <summary>Réserver</summary>
     <div class="booking-options">
-      <a href="https://www.airbnb.com/h/marevostrumsantamaria" target="_blank" rel="noopener noreferrer">Airbnb</a>
-      <a href="https://www.booking.com/hotel/es/santa-maria-casco-antiguo.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
-      <a href="https://booking.bluemoonlightgroup.com/alquiler/apartamento-peniscola-santa-maria-marevostrum-751394.html" target="_blank" rel="noopener noreferrer">Reserva directa</a>
+      <a href="https://www.airbnb.com/h/marevostrumperla" target="_blank" rel="noopener noreferrer">Airbnb</a>
+      <a href="https://www.booking.com/hotel/es/marevostrum-perla-duplex-moderno-con-vistas.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+      <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
     </div>
   </details>
-  <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
-
+  <a class="btn btn-secondary" href="index-fr.html">Retour à l’accueil</a>
 </section>
 
 </body>
