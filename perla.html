@@ -759,7 +759,64 @@
       }
     }
 
-  </style>
+  
+/* BOTÓN VOLVER ARRIBA */
+.back-to-top {
+  position:fixed;
+  right:max(18px, env(safe-area-inset-right));
+  bottom:max(18px, env(safe-area-inset-bottom));
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:#ff5b16;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font:700 22px/1 Arial, sans-serif;
+  cursor:pointer;
+  box-shadow:0 8px 22px rgba(0,0,0,.20);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
+  z-index:1200;
+}
+
+.back-to-top.is-visible {
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform:translateY(-2px);
+}
+
+.back-to-top:focus-visible {
+  outline:3px solid rgba(255,255,255,.9);
+  outline-offset:3px;
+}
+
+@media(min-width:801px) {
+  .back-to-top {
+    right:28px;
+    bottom:28px;
+    width:46px;
+    height:46px;
+    font-size:20px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .back-to-top {
+    transition:none;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -968,6 +1025,31 @@
   </details>
   <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
 </section>
+
+
+<button class="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+<script>
+(function () {
+  const button = document.querySelector('.back-to-top');
+  if (!button) return;
+
+  function updateBackToTop() {
+    button.classList.toggle('is-visible', window.scrollY > 600);
+  }
+
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+
+  button.addEventListener('click', function () {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({
+      top: 0,
+      behavior: reducedMotion ? 'auto' : 'smooth'
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
