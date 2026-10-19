@@ -691,132 +691,7 @@
       }
     }
 
-  
-    /* SELECTOR DE IDIOMA */
-    .lang-menu {
-      position:relative;
-      display:inline-block;
-      margin-left:2px;
-    }
-
-    .lang-current {
-      appearance:none;
-      border:0;
-      background:#ff5b16;
-      color:#fff;
-      padding:14px 16px;
-      border-radius:28px;
-      font-family:inherit;
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      cursor:pointer;
-    }
-
-    .lang-current span {
-      margin-left:4px;
-      font-size:9px;
-    }
-
-    .lang-options {
-      display:none;
-      position:absolute;
-      top:calc(100% + 7px);
-      right:0;
-      min-width:72px;
-      padding:6px 0;
-      background:#fff;
-      box-shadow:0 8px 22px rgba(0,0,0,.15);
-      z-index:1000;
-    }
-
-    .lang-menu:hover .lang-options,
-    .lang-menu:focus-within .lang-options {
-      display:block;
-    }
-
-    .lang-options a {
-      display:block;
-      padding:9px 14px;
-      color:#243B7A !important;
-      text-decoration:none;
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:1px;
-    }
-
-    .lang-options a:hover,
-    .lang-options a:focus {
-      background:#f7f4ee;
-      color:#ff5b16 !important;
-    }
-
-    @media(max-width:800px) {
-      .lang-current {
-        padding:11px 14px;
-        font-size:10px;
-      }
-    }
-
-  
-/* BOTÓN VOLVER ARRIBA */
-.back-to-top {
-  position:fixed;
-  right:max(18px, env(safe-area-inset-right));
-  bottom:max(18px, env(safe-area-inset-bottom));
-  width:48px;
-  height:48px;
-  border:0;
-  border-radius:50%;
-  background:#ff5b16;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font:700 22px/1 Arial, sans-serif;
-  cursor:pointer;
-  box-shadow:0 8px 22px rgba(0,0,0,.20);
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(10px);
-  transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
-  z-index:1200;
-}
-
-.back-to-top.is-visible {
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
-}
-
-.back-to-top:hover,
-.back-to-top:focus-visible {
-  transform:translateY(-2px);
-}
-
-.back-to-top:focus-visible {
-  outline:3px solid rgba(255,255,255,.9);
-  outline-offset:3px;
-}
-
-@media(min-width:801px) {
-  .back-to-top {
-    right:28px;
-    bottom:28px;
-    width:46px;
-    height:46px;
-    font-size:20px;
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .back-to-top {
-    transition:none;
-  }
-}
-
-</style>
+  </style>
 </head>
 
 <body>
@@ -828,6 +703,7 @@
 
   <nav>
     <a href="index.html#apartamentos">Apartamentos</a>
+    <a href="index.html#propietarios">Propietarios</a>
     <a href="index.html#anfitriones">Anfitriones</a>
     <a href="index.html#contacto">Contacto</a>
     <details class="nav-booking">
@@ -838,14 +714,6 @@
         <a href="https://es.rentalia.com/1036487" target="_blank" rel="noopener noreferrer">Rentalia</a>
       </div>
     </details>
-    <div class="lang-menu">
-      <button class="lang-current" type="button" aria-label="Cambiar idioma">ES <span aria-hidden="true">▾</span></button>
-      <div class="lang-options">
-        <a href="perla-en.html">EN</a>
-        <a href="perla-fr.html">FR</a>
-      </div>
-    </div>
-
   </nav>
 </header>
 
@@ -1025,31 +893,6 @@
   </details>
   <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
 </section>
-
-
-<button class="back-to-top" type="button" aria-label="Volver arriba" title="Volver arriba">↑</button>
-
-<script>
-(function () {
-  const button = document.querySelector('.back-to-top');
-  if (!button) return;
-
-  function updateBackToTop() {
-    button.classList.toggle('is-visible', window.scrollY > 600);
-  }
-
-  window.addEventListener('scroll', updateBackToTop, { passive: true });
-  updateBackToTop();
-
-  button.addEventListener('click', function () {
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({
-      top: 0,
-      behavior: reducedMotion ? 'auto' : 'smooth'
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
