@@ -2355,6 +2355,152 @@ font-family:inherit;
   background:#f7f4ee;
   color:#ff5b16 !important;
 }
+
+.mobile-lang-menu {
+  display:none;
+}
+
+/* === MOBILE: clear menu + back to top === */
+.mobile-menu-toggle {
+  display:none;
+  position:fixed;
+  top:20px;
+  right:18px;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:#ff5b16;
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  font-size:22px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:1px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  z-index:3002;
+  cursor:pointer;
+}
+
+.mobile-menu-panel {
+  display:none;
+  position:fixed;
+  top:78px;
+  right:18px;
+  width:min(290px, calc(100vw - 36px));
+  padding:10px;
+  background:#fff;
+  box-shadow:0 14px 36px rgba(0,0,0,.22);
+  z-index:3001;
+}
+
+.mobile-menu-panel.is-open {
+  display:block;
+}
+
+.mobile-menu-panel a {
+  display:block;
+  padding:14px 15px;
+  color:#243B7A;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:1.2px;
+  border-bottom:1px solid rgba(36,59,122,.10);
+}
+
+.mobile-menu-panel a:last-child {
+  border-bottom:0;
+}
+
+.mobile-menu-panel a:active,
+.mobile-menu-panel a:focus {
+  color:#ff5b16;
+  background:#f7f4ee;
+}
+
+.back-to-top {
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:50%;
+  background:#ff5b16;
+  color:#fff;
+  font-size:22px;
+  line-height:1;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  z-index:2999;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+
+.back-to-top.is-visible {
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+@media(max-width:800px) {
+  header {
+    padding:24px 6% !important;
+    flex-direction:row !important;
+    align-items:flex-start !important;
+    gap:0 !important;
+  }
+
+  header nav {
+    display:none !important;
+  }
+
+  .logo {
+    width:190px !important;
+  }
+
+  .mobile-menu-toggle {
+    display:flex;
+  }
+
+  .mobile-lang-menu {
+    display:inline-block;
+    position:fixed;
+    top:25px;
+    right:78px;
+    margin-left:0;
+    z-index:3002;
+  }
+
+  .mobile-lang-menu .lang-options {
+    right:0;
+  }
+
+  .hero {
+    padding:135px 6% 70px !important;
+  }
+
+  .hero .btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    max-width:100%;
+    padding:17px 20px;
+    font-size:11px;
+    line-height:1.2;
+    letter-spacing:1px;
+    text-align:center;
+    white-space:nowrap;
+  }
+}
+
 </style>
           
 </head>
@@ -2377,6 +2523,21 @@ font-family:inherit;
 </div>
     
   </nav>
+
+  <div class="lang-menu mobile-lang-menu">
+    <button class="lang-current" type="button" aria-label="Change language">EN <span aria-hidden="true">▾</span></button>
+    <div class="lang-options">
+      <a href="index.html">ES</a>
+      <a href="index-fr.html">FR</a>
+    </div>
+  </div>
+
+  <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">•••</button>
+  <div class="mobile-menu-panel" aria-label="Mobile menu">
+    <a href="#apartamentos">Apartments</a>
+    <a href="#anfitriones">Hosts</a>
+    <a href="#contacto">Contact</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -2386,7 +2547,7 @@ font-family:inherit;
       Your time.<br>
       <span class="orange">Your stay.</span>
     </h1>
-    <a class="btn" href="#apartamentos">View apartments</a>
+    <a class="btn" href="#apartamentos">View & book apartments</a>
   </div>
 </section>
 
@@ -2426,7 +2587,7 @@ font-family:inherit;
       <p class="card-desc">All of Peñíscola in front of you, silence behind.</p>
     </div>
 
-    <a class="card-cta" href="perla-en.html">View Perla</a>
+    <a class="card-cta" href="perla-en.html">View & book Perla</a>
   </div>
 </div>
 
@@ -2442,7 +2603,7 @@ font-family:inherit;
       <p class="card-desc">Peñíscola on foot, the sea beside you.</p>
     </div>
 
-    <a class="card-cta" href="santa-maria-en.html">View Santa María</a>
+    <a class="card-cta" href="santa-maria-en.html">View & book Sta. María</a>
   </div>
 </div>
   </div>
@@ -2673,5 +2834,55 @@ font-family:inherit;
 
   });
 </script>
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+<script>
+  (function () {
+    const menuButton = document.querySelector('.mobile-menu-toggle');
+    const menuPanel = document.querySelector('.mobile-menu-panel');
+    const backToTop = document.querySelector('.back-to-top');
+
+    if (menuButton && menuPanel) {
+      const closeMenu = () => {
+        menuPanel.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      };
+
+      menuButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const open = menuPanel.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      menuPanel.addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+
+      menuPanel.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeMenu();
+      });
+    }
+
+    if (backToTop) {
+      const updateBackToTop = () => {
+        backToTop.classList.toggle('is-visible', window.scrollY > 450);
+      };
+
+      window.addEventListener('scroll', updateBackToTop, { passive:true });
+      updateBackToTop();
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top:0, behavior:'smooth' });
+      });
+    }
+  })();
+</script>
+
 </body>
 </html>
