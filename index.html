@@ -2356,6 +2356,10 @@ font-family:inherit;
   color:#ff5b16 !important;
 }
 
+.mobile-lang-menu {
+  display:none;
+}
+
 /* === MÓVIL: menú claro + volver arriba === */
 .mobile-menu-toggle {
   display:none;
@@ -2446,7 +2450,7 @@ font-family:inherit;
   height:46px;
   border:0;
   border-radius:50%;
-  background:#243B7A;
+  background:#ff5b16;
   color:#fff;
   font-size:22px;
   line-height:1;
@@ -2484,6 +2488,19 @@ font-family:inherit;
   .mobile-menu-toggle {
     display:flex;
   }
+
+  .mobile-lang-menu {
+    display:inline-block;
+    position:fixed;
+    top:25px;
+    right:78px;
+    margin-left:0;
+    z-index:3002;
+  }
+
+  .mobile-lang-menu .lang-options {
+    right:0;
+  }
 }
 
 @media(max-width:800px) {
@@ -2516,18 +2533,20 @@ font-family:inherit;
     
   </nav>
 
+  <div class="lang-menu mobile-lang-menu">
+    <button class="lang-current" type="button" aria-label="Cambiar idioma">ES <span aria-hidden="true">▾</span></button>
+    <div class="lang-options">
+      <a href="index-en.html">EN</a>
+      <a href="index-fr.html">FR</a>
+    </div>
+  </div>
+
   <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">•••</button>
   <div class="mobile-menu-panel" aria-label="Menú móvil">
     <a href="#apartamentos">Apartamentos</a>
     <a href="#propietarios">Propietarios</a>
     <a href="#anfitriones">Anfitriones</a>
     <a href="#contacto">Contacto</a>
-    <div class="mobile-menu-languages">
-      <span>Idioma:</span>
-      <strong>ES</strong>
-      <a href="index-en.html">EN</a>
-      <a href="index-fr.html">FR</a>
-    </div>
   </div>
 </header>
 
@@ -2578,7 +2597,7 @@ font-family:inherit;
       <p class="card-desc">Peñíscola entera delante, silencio detrás.</p>
     </div>
 
-    <a class="card-cta" href="perla.html">Ver Perla</a>
+    <a class="card-cta" href="perla.html">Ver y reservar apartamento Perla</a>
   </div>
 </div>
 
@@ -2594,7 +2613,7 @@ font-family:inherit;
       <p class="card-desc">Peñíscola a pie, el mar al lado.</p>
     </div>
 
-    <a class="card-cta" href="santa-maria.html">Ver Santa María</a>
+    <a class="card-cta" href="santa-maria.html">Ver y reservar apartamento Santa María</a>
   </div>
 </div>
   </div>
