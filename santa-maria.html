@@ -767,7 +767,155 @@
       }
     }
 
-  </style>
+  
+/* === MÓVIL: menú claro + volver arriba === */
+.mobile-menu-toggle {
+  display:none;
+  position:fixed;
+  top:20px;
+  right:18px;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  background:#ff5b16;
+  color:#fff;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  font-size:22px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:1px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  z-index:3002;
+  cursor:pointer;
+}
+
+.mobile-menu-panel {
+  display:none;
+  position:fixed;
+  top:78px;
+  right:18px;
+  width:min(290px, calc(100vw - 36px));
+  padding:10px;
+  background:#fff;
+  box-shadow:0 14px 36px rgba(0,0,0,.22);
+  z-index:3001;
+}
+
+.mobile-menu-panel.is-open {
+  display:block;
+}
+
+.mobile-menu-panel a {
+  display:block;
+  padding:14px 15px;
+  color:#243B7A;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:12px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:1.2px;
+  border-bottom:1px solid rgba(36,59,122,.10);
+}
+
+.mobile-menu-panel a:last-of-type {
+  border-bottom:0;
+}
+
+.mobile-menu-panel a:active,
+.mobile-menu-panel a:focus {
+  color:#ff5b16;
+  background:#f7f4ee;
+}
+
+.mobile-menu-languages {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 15px 6px;
+  color:#243B7A;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.mobile-menu-languages a {
+  display:inline;
+  padding:0;
+  border:0;
+  font-size:10px;
+}
+
+.back-to-top {
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:50%;
+  background:#243B7A;
+  color:#fff;
+  font-size:22px;
+  line-height:1;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  z-index:2999;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+
+.back-to-top.is-visible {
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+@media(max-width:800px) {
+  header {
+    padding:24px 6% !important;
+    flex-direction:row !important;
+    align-items:flex-start !important;
+    gap:0 !important;
+  }
+
+  header nav {
+    display:none !important;
+  }
+
+  .logo {
+    width:190px !important;
+  }
+
+  .mobile-menu-toggle {
+    display:flex;
+  }
+}
+
+@media(max-width:800px) {
+  .hero-apartment {
+    padding:130px 6% 60px !important;
+  }
+
+  .details-header h2 {
+    font-size:27px !important;
+    line-height:1.2 !important;
+  }
+
+  .distribution h3 {
+    font-size:18px !important;
+    line-height:1.12 !important;
+    letter-spacing:1px !important;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -790,6 +938,14 @@
       </div>
     </details>
   </nav>
+
+  <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">•••</button>
+  <div class="mobile-menu-panel" aria-label="Menú móvil">
+    <a href="index.html#apartamentos">Apartamentos</a>
+    <a href="index.html#propietarios">Propietarios</a>
+    <a href="index.html#anfitriones">Anfitriones</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
 </header>
 
 <section class="hero-apartment">
@@ -980,6 +1136,56 @@
   <a class="btn btn-secondary" href="index.html">Volver al inicio</a>
 
 </section>
+
+  <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
+
+<script>
+  (function () {
+    const menuButton = document.querySelector('.mobile-menu-toggle');
+    const menuPanel = document.querySelector('.mobile-menu-panel');
+    const backToTop = document.querySelector('.back-to-top');
+
+    if (menuButton && menuPanel) {
+      const closeMenu = () => {
+        menuPanel.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      };
+
+      menuButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const open = menuPanel.classList.toggle('is-open');
+        menuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      menuPanel.addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+
+      menuPanel.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeMenu();
+      });
+    }
+
+    if (backToTop) {
+      const updateBackToTop = () => {
+        backToTop.classList.toggle('is-visible', window.scrollY > 450);
+      };
+
+      window.addEventListener('scroll', updateBackToTop, { passive:true });
+      updateBackToTop();
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top:0, behavior:'smooth' });
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
