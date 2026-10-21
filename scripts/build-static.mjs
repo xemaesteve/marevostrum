@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, rm, readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
 
@@ -16,6 +16,7 @@ const photographs = [
   'images/apartamentos/perla/piscina-perla.jpg'
 ];
 
+await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 for (const entry of await readdir(root)) {
   if (!excluded.has(entry)) await cp(join(root, entry), join(dist, entry), { recursive: true });
