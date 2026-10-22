@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node scripts/build-static.mjs",
-    "test": "node scripts/check-site.mjs"
+    "test": "node scripts/check-site.mjs && node scripts/check-seo.mjs"
   },
   "devDependencies": {
     "sharp": "0.34.4"
